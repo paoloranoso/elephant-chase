@@ -29,6 +29,10 @@
         [hero setPosition:ccp(screenSize.width/2, screenSize.height*0.17f)];
         [self addChild:hero];
         
+        boat = [CCSprite spriteWithFile:@"boat.png"];
+        [boat setPosition:ccp(-5.0f, screenSize.height*0.95f)];
+        [self addChild:boat];
+        
         
         //TODO: more sprite adding here for elephant, boat, bomb
     
@@ -88,7 +92,6 @@
 #pragma mark Update Method
 -(void) update:(ccTime)deltaTime
 {    
-    
     //move hero left or right
     if (leftButton.active == YES) {
         hero.position = ccp( hero.position.x - 150*deltaTime, hero.position.y);
@@ -96,6 +99,14 @@
     if (rightButton.active == YES) {
         hero.position = ccp( hero.position.x + 150*deltaTime, hero.position.y);
     }
+    
+    
+    //boat moving across screen
+    boat.position = ccp( boat.position.x + 100*deltaTime, boat.position.y );
+    if (boat.position.x > screenSize.width+32) {
+        boat.position = ccp( -32, boat.position.y );
+    }    
+    
     
 }
 

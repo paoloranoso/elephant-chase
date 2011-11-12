@@ -139,6 +139,7 @@
 		EC58A4E1146E733900E7A841 /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D4146E733900E7A841 /* SneakyButtonSkinnedBase.m */; };
 		EC58A4E2146E733900E7A841 /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D6146E733900E7A841 /* SneakyJoystick.m */; };
 		EC58A4E3146E733900E7A841 /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D8146E733900E7A841 /* SneakyJoystickSkinnedBase.m */; };
+		EC58A4E6146E7CB000E7A841 /* boat.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4E5146E7CB000E7A841 /* boat.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -404,6 +405,7 @@
 		EC58A4D6146E733900E7A841 /* SneakyJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystick.m; sourceTree = "<group>"; };
 		EC58A4D7146E733900E7A841 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
 		EC58A4D8146E733900E7A841 /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
+		EC58A4E5146E7CB000E7A841 /* boat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,7 +462,7 @@
 		EC1929E3146E1A4D001D072A /* Elephant Chase */ = {
 			isa = PBXGroup;
 			children = (
-				EC58A4C6146E733900E7A841 /* SneakyInput */,
+				EC58A4E4146E7C9800E7A841 /* third party libraries */,
 				EC58A4A7146E62B700E7A841 /* config */,
 				EC58A4AB146E64AC00E7A841 /* helpers */,
 				EC58A4A5146E5F2100E7A841 /* Underwater Level */,
@@ -847,6 +849,7 @@
 		EC58A4B1146E675000E7A841 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EC58A4E5146E7CB000E7A841 /* boat.png */,
 				EC58A4C0146E6D6000E7A841 /* hero.png */,
 				EC58A4BB146E6ABF00E7A841 /* underwater-background.png */,
 			);
@@ -883,6 +886,14 @@
 				EC58A4D0146E733900E7A841 /* right-up.png */,
 			);
 			path = MyImages;
+			sourceTree = "<group>";
+		};
+		EC58A4E4146E7C9800E7A841 /* third party libraries */ = {
+			isa = PBXGroup;
+			children = (
+				EC58A4C6146E733900E7A841 /* SneakyInput */,
+			);
+			name = "third party libraries";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -951,6 +962,7 @@
 				EC58A4DD146E733900E7A841 /* left-up.png in Resources */,
 				EC58A4DE146E733900E7A841 /* right-down.png in Resources */,
 				EC58A4DF146E733900E7A841 /* right-up.png in Resources */,
+				EC58A4E6146E7CB000E7A841 /* boat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
