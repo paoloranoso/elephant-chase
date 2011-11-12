@@ -13,6 +13,9 @@
 #import "SneakyButtonSkinnedBase.h"
 
 @interface UnderwaterGameplayLayer : CCLayer{
+    int boatTimer;
+    BOOL boatInMotion;
+    
     CCSprite *hero;
     CCSprite *elephant;
     CCSprite *boat;

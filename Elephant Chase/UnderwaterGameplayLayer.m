@@ -14,6 +14,7 @@
 
 @interface UnderwaterGameplayLayer(PrivateMethods)
 -(void)initDirectionalButtons;
+-(void)updateBoat;
 @end
 
 @implementation UnderwaterGameplayLayer
@@ -29,9 +30,15 @@
         [hero setPosition:ccp(screenSize.width/2, screenSize.height*0.17f)];
         [self addChild:hero];
         
-        boat = [CCSprite spriteWithFile:@"boat.png"];
-        [boat setPosition:ccp(-5.0f, screenSize.height*0.95f)];
+        //init boat but do not add yet, the updateBoat function will add it
+        boat = [CCSprite spriteWithFile:@"cargo-ship.png"];
+        [boat setPosition:ccp(screenSize.width + 256.0f, screenSize.height*0.90f)];        
         [self addChild:boat];
+        
+        elephant = [CCSprite spriteWithFile:@"elephant0.png"];
+        [elephant setPosition:ccp(screenSize.width/2, screenSize.height*0.50f)];
+        [self addChild:elephant];
+        
         
         
         //TESTING
@@ -44,8 +51,19 @@
     
         
         [self initDirectionalButtons];
+
         
+        boatTimer = 10;
+        boatInMotion = NO;
+        
+        
+        //to determine hero movement from buttons
         [self scheduleUpdate];
+        
+        //to randomly make the boat come by every 5-15 secs
+        [self schedule:@selector(updateBoat) interval:1.0];
+        
+        
         
 	}
 	return self;
@@ -95,7 +113,7 @@
 
 
 #pragma mark -
-#pragma mark Update Method
+#pragma mark Update Methods
 -(void) update:(ccTime)deltaTime
 {    
     //move hero left or right
@@ -109,6 +127,7 @@
     if (rightButton.active == YES) {
         if ( hero.position.x > (screenSize.width - 32) ) {
             //do nothing because he'll go off screen
+            [self removeChild:bomb cleanup:YES]; 
         }else{
             hero.position = ccp( hero.position.x + 150*deltaTime, hero.position.y);
         }
@@ -118,15 +137,30 @@
     
     
     //boat moving across screen
-    boat.position = ccp( boat.position.x + 100*deltaTime, boat.position.y );
-    if (boat.position.x > screenSize.width+32) {
-        boat.position = ccp( -32, boat.position.y );
-    }    
+    if ( boatInMotion ) {
+        boat.position = ccp( boat.position.x - 100*deltaTime, boat.position.y );
+        if (boat.position.x < -256) {
+            boat.position = ccp( screenSize.width + 256.0f, boat.position.y );
+            boatInMotion = NO;
+        }    
+    }
     
+    
+}
 
+-(void)updateBoat{
+    if (!boatInMotion) {
+        boatTimer--;
+    }
     
-    
-    
+    if ( (boatTimer <= 0) && (!boatInMotion) ){      
+        //boat will now move from right to left until it is offscreen
+        boatInMotion = YES;
+        
+        //Reset boatTimer by getting a random number between 5 and 15...this is the number of seconds we wait till the boat comes again
+        boatTimer =  (arc4random() % 16) + 5;        
+        CCLOG(@"boatTimer reset to %d seconds", boatTimer);
+    }
 }
 
 

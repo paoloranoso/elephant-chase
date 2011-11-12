@@ -128,6 +128,9 @@
 		EC521E8E146EFB0F001F0BFF /* right-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E8A146EFB0F001F0BFF /* right-down.png */; };
 		EC521E8F146EFB0F001F0BFF /* right-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E8B146EFB0F001F0BFF /* right-up.png */; };
 		EC521E91146EFF76001F0BFF /* underwater-background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E90146EFF76001F0BFF /* underwater-background.png */; };
+		EC521E9A146F0AC1001F0BFF /* elephant1.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E98146F0AC1001F0BFF /* elephant1.png */; };
+		EC521E9B146F0AC1001F0BFF /* elephant0.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E99146F0AC1001F0BFF /* elephant0.png */; };
+		EC521EA1146F24F2001F0BFF /* cargo-ship.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EA0146F24F2001F0BFF /* cargo-ship.png */; };
 		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
@@ -385,6 +388,9 @@
 		EC521E8A146EFB0F001F0BFF /* right-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-down.png"; sourceTree = "<group>"; };
 		EC521E8B146EFB0F001F0BFF /* right-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-up.png"; sourceTree = "<group>"; };
 		EC521E90146EFF76001F0BFF /* underwater-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "underwater-background.png"; sourceTree = "<group>"; };
+		EC521E98146F0AC1001F0BFF /* elephant1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant1.png; sourceTree = "<group>"; };
+		EC521E99146F0AC1001F0BFF /* elephant0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant0.png; sourceTree = "<group>"; };
+		EC521EA0146F24F2001F0BFF /* cargo-ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cargo-ship.png"; sourceTree = "<group>"; };
 		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
 		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
@@ -851,6 +857,9 @@
 		EC58A4B1146E675000E7A841 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EC521E98146F0AC1001F0BFF /* elephant1.png */,
+				EC521EA0146F24F2001F0BFF /* cargo-ship.png */,
+				EC521E99146F0AC1001F0BFF /* elephant0.png */,
 				EC521E90146EFF76001F0BFF /* underwater-background.png */,
 				EC521E76146EF363001F0BFF /* bomb.png */,
 				EC58A4E5146E7CB000E7A841 /* boat.png */,
@@ -967,6 +976,9 @@
 				EC521E8E146EFB0F001F0BFF /* right-down.png in Resources */,
 				EC521E8F146EFB0F001F0BFF /* right-up.png in Resources */,
 				EC521E91146EFF76001F0BFF /* underwater-background.png in Resources */,
+				EC521E9A146F0AC1001F0BFF /* elephant1.png in Resources */,
+				EC521E9B146F0AC1001F0BFF /* elephant0.png in Resources */,
+				EC521EA1146F24F2001F0BFF /* cargo-ship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
