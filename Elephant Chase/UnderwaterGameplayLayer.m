@@ -9,12 +9,15 @@
 
 #import "UnderwaterGameplayLayer.h"
 
+#import "CCTouchDispatcher.h"
+
 #define kDirectionalButtonLength 64.0f
 
 
 @interface UnderwaterGameplayLayer(PrivateMethods)
 -(void)initDirectionalButtons;
 -(void)updateBoat;
+-(void)itemContainsTouch:(UITouch *)touch;
 @end
 
 @implementation UnderwaterGameplayLayer
@@ -63,7 +66,7 @@
         //to randomly make the boat come by every 5-15 secs
         [self schedule:@selector(updateBoat) interval:1.0];
         
-        
+        self.isTouchEnabled = YES;
         
 	}
 	return self;
@@ -165,13 +168,28 @@
 
 
 
-
-
-
-
-
-- (void) dealloc{
-	[super dealloc];
+#pragma mark - Touches
+-(void) registerWithTouchDispatcher{
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 }
+
+-(BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {        
+    CGPoint location = [self convertTouchToNodeSpace: touch];
+    
+    
+    //TODO: check if bomb already dropped
+    
+    
+    if ( CGRectContainsPoint(boat.boundingBox, location) ) {
+        //TODO: logic on dropping bomb here
+        CCLOG(@"boat touched!");
+        return YES;
+    }
+    
+    return NO;
+}
+
+
+
 
 @end
