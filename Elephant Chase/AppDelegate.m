@@ -9,9 +9,10 @@
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "GameConfig.h"
 #import "HelloWorldLayer.h"
 #import "RootViewController.h"
+#import "GameConfig.h"
+#import "UnderwaterGameScene.h"
 
 @implementation AppDelegate
 
@@ -110,7 +111,7 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
+	[[CCDirector sharedDirector] runWithScene: [UnderwaterGameScene node]];
 }
 
 

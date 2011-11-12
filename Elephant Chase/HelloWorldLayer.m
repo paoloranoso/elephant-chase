@@ -12,8 +12,7 @@
 
 @implementation HelloWorldLayer
 
-+(CCScene *) scene
-{
++(CCScene *) scene{
 	CCScene *scene = [CCScene node];
 	
 	HelloWorldLayer *layer = [HelloWorldLayer node];
@@ -24,8 +23,7 @@
 }
 
 
--(id) init
-{
+-(id) init{
 	if( (self=[super init])) {
 		
 		CGSize size = [[CCDirector sharedDirector] winSize];
@@ -38,8 +36,7 @@
 }
 
 
-- (void) dealloc
-{
+- (void) dealloc{
 	[super dealloc];
 }
 
