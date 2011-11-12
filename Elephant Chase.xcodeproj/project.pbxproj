@@ -123,6 +123,10 @@
 		EC192B3A146E1A50001D072A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC192B39146E1A50001D072A /* RootViewController.m */; };
 		EC192B3D146E1A50001D072A /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC192B3C146E1A50001D072A /* HelloWorldLayer.m */; };
 		EC521E77146EF363001F0BFF /* bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E76146EF363001F0BFF /* bomb.png */; };
+		EC521E8C146EFB0F001F0BFF /* left-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E88146EFB0F001F0BFF /* left-up.png */; };
+		EC521E8D146EFB0F001F0BFF /* left-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E89146EFB0F001F0BFF /* left-down.png */; };
+		EC521E8E146EFB0F001F0BFF /* right-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E8A146EFB0F001F0BFF /* right-down.png */; };
+		EC521E8F146EFB0F001F0BFF /* right-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E8B146EFB0F001F0BFF /* right-up.png */; };
 		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BC146E6ABF00E7A841 /* underwater-background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4BB146E6ABF00E7A841 /* underwater-background.png */; };
@@ -376,6 +380,10 @@
 		EC192B3C146E1A50001D072A /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		EC192B3E146E1A50001D072A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		EC521E76146EF363001F0BFF /* bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb.png; sourceTree = "<group>"; };
+		EC521E88146EFB0F001F0BFF /* left-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-up.png"; sourceTree = "<group>"; };
+		EC521E89146EFB0F001F0BFF /* left-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-down.png"; sourceTree = "<group>"; };
+		EC521E8A146EFB0F001F0BFF /* right-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-down.png"; sourceTree = "<group>"; };
+		EC521E8B146EFB0F001F0BFF /* right-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-up.png"; sourceTree = "<group>"; };
 		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
 		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
@@ -875,6 +883,10 @@
 		EC58A4CC146E733900E7A841 /* MyImages */ = {
 			isa = PBXGroup;
 			children = (
+				EC521E88146EFB0F001F0BFF /* left-up.png */,
+				EC521E89146EFB0F001F0BFF /* left-down.png */,
+				EC521E8A146EFB0F001F0BFF /* right-down.png */,
+				EC521E8B146EFB0F001F0BFF /* right-up.png */,
 			);
 			path = MyImages;
 			sourceTree = "<group>";
@@ -951,6 +963,10 @@
 				EC58A4DB146E733900E7A841 /* LICENSE in Resources */,
 				EC58A4E6146E7CB000E7A841 /* boat.png in Resources */,
 				EC521E77146EF363001F0BFF /* bomb.png in Resources */,
+				EC521E8C146EFB0F001F0BFF /* left-up.png in Resources */,
+				EC521E8D146EFB0F001F0BFF /* left-down.png in Resources */,
+				EC521E8E146EFB0F001F0BFF /* right-down.png in Resources */,
+				EC521E8F146EFB0F001F0BFF /* right-up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

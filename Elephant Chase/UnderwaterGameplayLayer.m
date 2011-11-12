@@ -55,8 +55,8 @@
 -(void)initDirectionalButtons{
     CGRect leftButtonDimensions = CGRectMake(0, 0, kDirectionalButtonLength, kDirectionalButtonLength);
     CGRect rightButtonDimensions = CGRectMake(0, 0, kDirectionalButtonLength, kDirectionalButtonLength);    
-    CGPoint leftButtonPosition = ccp(screenSize.width*0.2f, screenSize.height*0.1f);
-    CGPoint rightButtonPosition = ccp(screenSize.width*0.8f, screenSize.height*0.1f);    
+    CGPoint leftButtonPosition = ccp(screenSize.width*0.1f, screenSize.height*0.05f);
+    CGPoint rightButtonPosition = ccp(screenSize.width*0.9f, screenSize.height*0.05f);    
     
     SneakyButtonSkinnedBase *leftButtonBase =
     [[[SneakyButtonSkinnedBase alloc] init] autorelease];
