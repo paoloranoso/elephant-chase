@@ -128,6 +128,17 @@
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
 		EC58A4C1146E6D6000E7A841 /* hero.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4C0146E6D6000E7A841 /* hero.png */; };
 		EC58A4C4146E6E7B00E7A841 /* UnderwaterGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4C3146E6E7B00E7A841 /* UnderwaterGameScene.m */; };
+		EC58A4D9146E733900E7A841 /* ColoredCircleSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4C8146E733900E7A841 /* ColoredCircleSprite.m */; };
+		EC58A4DA146E733900E7A841 /* ColoredSquareSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4CA146E733900E7A841 /* ColoredSquareSprite.m */; };
+		EC58A4DB146E733900E7A841 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CB146E733900E7A841 /* LICENSE */; };
+		EC58A4DC146E733900E7A841 /* left-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CD146E733900E7A841 /* left-down.png */; };
+		EC58A4DD146E733900E7A841 /* left-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CE146E733900E7A841 /* left-up.png */; };
+		EC58A4DE146E733900E7A841 /* right-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CF146E733900E7A841 /* right-down.png */; };
+		EC58A4DF146E733900E7A841 /* right-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4D0146E733900E7A841 /* right-up.png */; };
+		EC58A4E0146E733900E7A841 /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D2146E733900E7A841 /* SneakyButton.m */; };
+		EC58A4E1146E733900E7A841 /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D4146E733900E7A841 /* SneakyButtonSkinnedBase.m */; };
+		EC58A4E2146E733900E7A841 /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D6146E733900E7A841 /* SneakyJoystick.m */; };
+		EC58A4E3146E733900E7A841 /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D8146E733900E7A841 /* SneakyJoystickSkinnedBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -376,6 +387,23 @@
 		EC58A4C0146E6D6000E7A841 /* hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero.png; sourceTree = "<group>"; };
 		EC58A4C2146E6E7B00E7A841 /* UnderwaterGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterGameScene.h; sourceTree = "<group>"; };
 		EC58A4C3146E6E7B00E7A841 /* UnderwaterGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderwaterGameScene.m; sourceTree = "<group>"; };
+		EC58A4C7146E733900E7A841 /* ColoredCircleSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredCircleSprite.h; sourceTree = "<group>"; };
+		EC58A4C8146E733900E7A841 /* ColoredCircleSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredCircleSprite.m; sourceTree = "<group>"; };
+		EC58A4C9146E733900E7A841 /* ColoredSquareSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredSquareSprite.h; sourceTree = "<group>"; };
+		EC58A4CA146E733900E7A841 /* ColoredSquareSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredSquareSprite.m; sourceTree = "<group>"; };
+		EC58A4CB146E733900E7A841 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EC58A4CD146E733900E7A841 /* left-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-down.png"; sourceTree = "<group>"; };
+		EC58A4CE146E733900E7A841 /* left-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-up.png"; sourceTree = "<group>"; };
+		EC58A4CF146E733900E7A841 /* right-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-down.png"; sourceTree = "<group>"; };
+		EC58A4D0146E733900E7A841 /* right-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-up.png"; sourceTree = "<group>"; };
+		EC58A4D1146E733900E7A841 /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButton.h; sourceTree = "<group>"; };
+		EC58A4D2146E733900E7A841 /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButton.m; sourceTree = "<group>"; };
+		EC58A4D3146E733900E7A841 /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
+		EC58A4D4146E733900E7A841 /* SneakyButtonSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButtonSkinnedBase.m; sourceTree = "<group>"; };
+		EC58A4D5146E733900E7A841 /* SneakyJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystick.h; sourceTree = "<group>"; };
+		EC58A4D6146E733900E7A841 /* SneakyJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystick.m; sourceTree = "<group>"; };
+		EC58A4D7146E733900E7A841 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
+		EC58A4D8146E733900E7A841 /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +460,7 @@
 		EC1929E3146E1A4D001D072A /* Elephant Chase */ = {
 			isa = PBXGroup;
 			children = (
+				EC58A4C6146E733900E7A841 /* SneakyInput */,
 				EC58A4A7146E62B700E7A841 /* config */,
 				EC58A4AB146E64AC00E7A841 /* helpers */,
 				EC58A4A5146E5F2100E7A841 /* Underwater Level */,
@@ -824,6 +853,38 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		EC58A4C6146E733900E7A841 /* SneakyInput */ = {
+			isa = PBXGroup;
+			children = (
+				EC58A4C7146E733900E7A841 /* ColoredCircleSprite.h */,
+				EC58A4C8146E733900E7A841 /* ColoredCircleSprite.m */,
+				EC58A4C9146E733900E7A841 /* ColoredSquareSprite.h */,
+				EC58A4CA146E733900E7A841 /* ColoredSquareSprite.m */,
+				EC58A4CB146E733900E7A841 /* LICENSE */,
+				EC58A4CC146E733900E7A841 /* MyImages */,
+				EC58A4D1146E733900E7A841 /* SneakyButton.h */,
+				EC58A4D2146E733900E7A841 /* SneakyButton.m */,
+				EC58A4D3146E733900E7A841 /* SneakyButtonSkinnedBase.h */,
+				EC58A4D4146E733900E7A841 /* SneakyButtonSkinnedBase.m */,
+				EC58A4D5146E733900E7A841 /* SneakyJoystick.h */,
+				EC58A4D6146E733900E7A841 /* SneakyJoystick.m */,
+				EC58A4D7146E733900E7A841 /* SneakyJoystickSkinnedBase.h */,
+				EC58A4D8146E733900E7A841 /* SneakyJoystickSkinnedBase.m */,
+			);
+			path = SneakyInput;
+			sourceTree = "<group>";
+		};
+		EC58A4CC146E733900E7A841 /* MyImages */ = {
+			isa = PBXGroup;
+			children = (
+				EC58A4CD146E733900E7A841 /* left-down.png */,
+				EC58A4CE146E733900E7A841 /* left-up.png */,
+				EC58A4CF146E733900E7A841 /* right-down.png */,
+				EC58A4D0146E733900E7A841 /* right-up.png */,
+			);
+			path = MyImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -885,6 +946,11 @@
 				EC1929F7146E1A4D001D072A /* iTunesArtwork in Resources */,
 				EC58A4BC146E6ABF00E7A841 /* underwater-background.png in Resources */,
 				EC58A4C1146E6D6000E7A841 /* hero.png in Resources */,
+				EC58A4DB146E733900E7A841 /* LICENSE in Resources */,
+				EC58A4DC146E733900E7A841 /* left-down.png in Resources */,
+				EC58A4DD146E733900E7A841 /* left-up.png in Resources */,
+				EC58A4DE146E733900E7A841 /* right-down.png in Resources */,
+				EC58A4DF146E733900E7A841 /* right-up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,6 +1063,12 @@
 				EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */,
 				EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */,
 				EC58A4C4146E6E7B00E7A841 /* UnderwaterGameScene.m in Sources */,
+				EC58A4D9146E733900E7A841 /* ColoredCircleSprite.m in Sources */,
+				EC58A4DA146E733900E7A841 /* ColoredSquareSprite.m in Sources */,
+				EC58A4E0146E733900E7A841 /* SneakyButton.m in Sources */,
+				EC58A4E1146E733900E7A841 /* SneakyButtonSkinnedBase.m in Sources */,
+				EC58A4E2146E733900E7A841 /* SneakyJoystick.m in Sources */,
+				EC58A4E3146E733900E7A841 /* SneakyJoystickSkinnedBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
