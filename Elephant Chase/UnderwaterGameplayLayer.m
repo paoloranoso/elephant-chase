@@ -34,7 +34,7 @@
         boat = [CCSprite spriteWithFile:@"cargo-ship.png"];
         [boat setPosition:ccp(screenSize.width + 256.0f, screenSize.height*0.90f)];        
         [self addChild:boat];
-        
+         
         elephant = [CCSprite spriteWithFile:@"elephant0.png"];
         [elephant setPosition:ccp(screenSize.width/2, screenSize.height*0.50f)];
         [self addChild:elephant];
