@@ -34,6 +34,12 @@
         [self addChild:boat];
         
         
+        //TESTING
+        bomb = [CCSprite spriteWithFile:@"bomb.png"];
+        [bomb setPosition:ccp(50.0f, screenSize.height*0.65f)];
+        [self addChild:bomb];
+        
+        
         //TODO: more sprite adding here for elephant, boat, bomb
     
         
@@ -49,8 +55,8 @@
 -(void)initDirectionalButtons{
     CGRect leftButtonDimensions = CGRectMake(0, 0, kDirectionalButtonLength, kDirectionalButtonLength);
     CGRect rightButtonDimensions = CGRectMake(0, 0, kDirectionalButtonLength, kDirectionalButtonLength);    
-    CGPoint leftButtonPosition = ccp(screenSize.width*0.2f, screenSize.height*0.2f);
-    CGPoint rightButtonPosition = ccp(screenSize.width*0.8f, screenSize.height*0.2f);    
+    CGPoint leftButtonPosition = ccp(screenSize.width*0.2f, screenSize.height*0.1f);
+    CGPoint rightButtonPosition = ccp(screenSize.width*0.8f, screenSize.height*0.1f);    
     
     SneakyButtonSkinnedBase *leftButtonBase =
     [[[SneakyButtonSkinnedBase alloc] init] autorelease];
@@ -94,11 +100,21 @@
 {    
     //move hero left or right
     if (leftButton.active == YES) {
-        hero.position = ccp( hero.position.x - 150*deltaTime, hero.position.y);
+        if ( hero.position.x < (0+64) ) {
+            //do nothing because he'll go off screen
+        }else{
+            hero.position = ccp( hero.position.x - 150*deltaTime, hero.position.y);
+        }
     }
     if (rightButton.active == YES) {
-        hero.position = ccp( hero.position.x + 150*deltaTime, hero.position.y);
+        if ( hero.position.x > (screenSize.width - 32) ) {
+            //do nothing because he'll go off screen
+        }else{
+            hero.position = ccp( hero.position.x + 150*deltaTime, hero.position.y);
+        }
     }
+    
+    
     
     
     //boat moving across screen
@@ -106,6 +122,9 @@
     if (boat.position.x > screenSize.width+32) {
         boat.position = ccp( -32, boat.position.y );
     }    
+    
+
+    
     
     
 }

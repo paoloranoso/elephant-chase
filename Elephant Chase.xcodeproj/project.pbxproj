@@ -122,6 +122,7 @@
 		EC192B37146E1A50001D072A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC192B36146E1A50001D072A /* AppDelegate.m */; };
 		EC192B3A146E1A50001D072A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC192B39146E1A50001D072A /* RootViewController.m */; };
 		EC192B3D146E1A50001D072A /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC192B3C146E1A50001D072A /* HelloWorldLayer.m */; };
+		EC521E77146EF363001F0BFF /* bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E76146EF363001F0BFF /* bomb.png */; };
 		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BC146E6ABF00E7A841 /* underwater-background.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4BB146E6ABF00E7A841 /* underwater-background.png */; };
@@ -131,10 +132,6 @@
 		EC58A4D9146E733900E7A841 /* ColoredCircleSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4C8146E733900E7A841 /* ColoredCircleSprite.m */; };
 		EC58A4DA146E733900E7A841 /* ColoredSquareSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4CA146E733900E7A841 /* ColoredSquareSprite.m */; };
 		EC58A4DB146E733900E7A841 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CB146E733900E7A841 /* LICENSE */; };
-		EC58A4DC146E733900E7A841 /* left-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CD146E733900E7A841 /* left-down.png */; };
-		EC58A4DD146E733900E7A841 /* left-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CE146E733900E7A841 /* left-up.png */; };
-		EC58A4DE146E733900E7A841 /* right-down.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4CF146E733900E7A841 /* right-down.png */; };
-		EC58A4DF146E733900E7A841 /* right-up.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4D0146E733900E7A841 /* right-up.png */; };
 		EC58A4E0146E733900E7A841 /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D2146E733900E7A841 /* SneakyButton.m */; };
 		EC58A4E1146E733900E7A841 /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D4146E733900E7A841 /* SneakyButtonSkinnedBase.m */; };
 		EC58A4E2146E733900E7A841 /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D6146E733900E7A841 /* SneakyJoystick.m */; };
@@ -378,6 +375,7 @@
 		EC192B3B146E1A50001D072A /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		EC192B3C146E1A50001D072A /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		EC192B3E146E1A50001D072A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		EC521E76146EF363001F0BFF /* bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb.png; sourceTree = "<group>"; };
 		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
 		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
@@ -393,10 +391,6 @@
 		EC58A4C9146E733900E7A841 /* ColoredSquareSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredSquareSprite.h; sourceTree = "<group>"; };
 		EC58A4CA146E733900E7A841 /* ColoredSquareSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredSquareSprite.m; sourceTree = "<group>"; };
 		EC58A4CB146E733900E7A841 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		EC58A4CD146E733900E7A841 /* left-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-down.png"; sourceTree = "<group>"; };
-		EC58A4CE146E733900E7A841 /* left-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-up.png"; sourceTree = "<group>"; };
-		EC58A4CF146E733900E7A841 /* right-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-down.png"; sourceTree = "<group>"; };
-		EC58A4D0146E733900E7A841 /* right-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-up.png"; sourceTree = "<group>"; };
 		EC58A4D1146E733900E7A841 /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButton.h; sourceTree = "<group>"; };
 		EC58A4D2146E733900E7A841 /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButton.m; sourceTree = "<group>"; };
 		EC58A4D3146E733900E7A841 /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
@@ -849,6 +843,7 @@
 		EC58A4B1146E675000E7A841 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EC521E76146EF363001F0BFF /* bomb.png */,
 				EC58A4E5146E7CB000E7A841 /* boat.png */,
 				EC58A4C0146E6D6000E7A841 /* hero.png */,
 				EC58A4BB146E6ABF00E7A841 /* underwater-background.png */,
@@ -880,10 +875,6 @@
 		EC58A4CC146E733900E7A841 /* MyImages */ = {
 			isa = PBXGroup;
 			children = (
-				EC58A4CD146E733900E7A841 /* left-down.png */,
-				EC58A4CE146E733900E7A841 /* left-up.png */,
-				EC58A4CF146E733900E7A841 /* right-down.png */,
-				EC58A4D0146E733900E7A841 /* right-up.png */,
 			);
 			path = MyImages;
 			sourceTree = "<group>";
@@ -958,11 +949,8 @@
 				EC58A4BC146E6ABF00E7A841 /* underwater-background.png in Resources */,
 				EC58A4C1146E6D6000E7A841 /* hero.png in Resources */,
 				EC58A4DB146E733900E7A841 /* LICENSE in Resources */,
-				EC58A4DC146E733900E7A841 /* left-down.png in Resources */,
-				EC58A4DD146E733900E7A841 /* left-up.png in Resources */,
-				EC58A4DE146E733900E7A841 /* right-down.png in Resources */,
-				EC58A4DF146E733900E7A841 /* right-up.png in Resources */,
 				EC58A4E6146E7CB000E7A841 /* boat.png in Resources */,
+				EC521E77146EF363001F0BFF /* bomb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
