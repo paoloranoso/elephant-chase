@@ -20,6 +20,13 @@
     BOOL bombExploded;
     int bombSpeedMultiplier;    
     
+    BOOL isElephantChasing;
+    BOOL elephantStomped;    
+    BOOL isElephantStomping;
+    BOOL isElephantStunned;
+    int elephantSpeedMultiplierX;
+    int elephantSpeedMultiplierY;
+
     
     CCSprite *hero;
     CCSprite *elephant;

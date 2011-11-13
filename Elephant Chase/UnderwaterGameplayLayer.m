@@ -21,6 +21,7 @@
 -(void)updateBoat;
 -(void)dropBombFromBoat;
 -(void)explodeBombOnSprite:(CCSprite *)sprite;
+-(void)updateElephantChasing;
 @end
 
 @implementation UnderwaterGameplayLayer
@@ -42,7 +43,7 @@
         [self addChild:boat];
          
         elephant = [CCSprite spriteWithFile:@"elephant0.png"];
-        [elephant setPosition:ccp(screenSize.width/2, screenSize.height*0.50f)];
+        [elephant setPosition:ccp(-256.0f, screenSize.height*0.50f)];
         [self addChild:elephant];
         
         
@@ -59,7 +60,11 @@
         bombExploded = NO;
         bombSpeedMultiplier = 1;
         
-        
+        isElephantChasing = NO;
+        elephantStomped = NO;    
+        isElephantStunned = NO;
+        elephantSpeedMultiplierX = 1;        
+        elephantSpeedMultiplierY = 1;        
         
         
         //SOUNDZZzZz
@@ -83,6 +88,9 @@
         
         //to randomly make the boat come by every 5-15 secs
         [self schedule:@selector(updateBoat) interval:1.0];
+        
+        //to have the elephant chase the hero
+        [self schedule:@selector(updateElephantChasing) interval:1.0];
         
         self.isTouchEnabled = YES;
         
@@ -243,6 +251,57 @@
     }
         
     
+    //elephant chasing
+    if ( isElephantChasing && !isElephantStomping ) {
+        CGFloat elephantX = elephant.position.x;
+        CGFloat heroX = hero.position.x;
+        
+        CGFloat difference = elephantX - heroX;
+        
+        
+        
+        if ( ( difference > -16.0f ) && ( difference < 16.0f ) ) {
+            //stomp on human!!!
+            isElephantStomping = YES;
+            CCLOG(@"Stomping on human!");
+        }else  if ( difference <= -16.0f ) {
+            //move right
+            CGFloat newX = elephant.position.x + 100.0 * elephantSpeedMultiplierX * deltaTime;
+//            elephantSpeedMultiplierX++;                    
+            elephant.position = ccp(newX, elephant.position.y);
+            CCLOG(@"elephant moving right to follow human");
+        }else if ( difference >= 16.0f ){
+            //move left
+            CGFloat newX = elephant.position.x - 100.0 * elephantSpeedMultiplierX * deltaTime;
+//            elephantSpeedMultiplierX++;                    
+            elephant.position = ccp(newX, elephant.position.y);            
+            CCLOG(@"elephant moving left to follow human");
+        }        
+    }
+    
+    if ( isElephantStomping ) {
+        CGFloat newY = elephant.position.y - 20.0 * elephantSpeedMultiplierY * deltaTime;
+        elephantSpeedMultiplierY++;        
+        
+        elephant.position = ccp(elephant.position.x, newY);
+        
+        
+        //thump and also check to see if elephant hit human
+        if( elephant.position.y < 100 ){
+            //thump on the ocean surface
+            CCLOG(@"elephant THUMP!");
+            
+
+            if ( CGRectContainsPoint(hero.boundingBox, elephant.position) ) {
+                CCLOG(@"elephant hit human!!");
+                
+            }
+            
+        }
+        
+        
+    }
+    
 }
 
 -(void)updateBoat{
@@ -263,6 +322,15 @@
 }
 
 
+-(void)updateElephantChasing{
+    if ( !isElephantChasing && !isElephantStomping ) {
+        //make elephant follow hero on the x-axis
+        elephantSpeedMultiplierX = 1;
+        isElephantChasing = YES;
+    }
+}
+
+
 
 #pragma mark - Touches
 -(void) registerWithTouchDispatcher{
@@ -271,7 +339,6 @@
 
 -(BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {        
     CGPoint location = [self convertTouchToNodeSpace: touch];
-    
     
     //boat touched
     if ( CGRectContainsPoint(boat.boundingBox, location) ) {        
@@ -286,8 +353,10 @@
         
         return YES;
     }
-    
     return NO;
+    
+    
+    
 }
 
 
