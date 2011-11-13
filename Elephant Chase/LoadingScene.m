@@ -61,13 +61,13 @@
 	{
 		case TargetSceneMainMenu:
 		{
-			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[MainMenuScene scene] withColor:ccWHITE];
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:1 scene:[MainMenuScene scene] withColor:ccWHITE];
 			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
 		}
 		case TargetSceneHelp:
 		{
-			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[HelpScene scene] withColor:ccWHITE];
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:1 scene:[HelpScene scene] withColor:ccWHITE];
 			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
 		}
@@ -81,13 +81,13 @@
 		}
 		case TargetSceneYouLose:
 		{
-			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[YouLoseScene scene] withColor:ccWHITE];
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:2 scene:[YouLoseScene scene] withColor:ccWHITE];
 			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
 		}
 		case TargetSceneYouWin:
 		{
-			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[YouWinScene scene] withColor:ccWHITE];
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:2 scene:[YouWinScene scene] withColor:ccWHITE];
 			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
 		}

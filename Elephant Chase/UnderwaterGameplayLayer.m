@@ -72,8 +72,8 @@
         elephantRageMultiplier = 1;
         heroRageMultiplier = 1;
         
-        heroLife = 3;
-        elephantLife = 3;
+        heroLife = 1;
+        elephantLife = 1;
         
         gameOver = NO;
         gameWon = NO;

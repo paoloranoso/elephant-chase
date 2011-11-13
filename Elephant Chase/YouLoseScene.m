@@ -57,7 +57,7 @@
 	[CCMenuItemFont setFontName:@"Helvetica-BoldOblique"];
 	[CCMenuItemFont setFontSize:80];
 	
-	CCMenuItemFont* item1 = [CCMenuItemFont itemFromString:@"The elephant stole all your peanuts and squashed you with his butt." target:self selector:@selector(item1Touched:)];
+	CCMenuItemFont* item1 = [CCMenuItemFont itemFromString:@"You Lose!" target:self selector:@selector(item1Touched:)];
 	[CCMenuItemFont setFontSize:50];
 	CCMenuItemFont* item2 = [CCMenuItemFont itemFromString:@"Try Again" target:self selector:@selector(item2Touched:)];
 	CCMenuItemFont* item3 = [CCMenuItemFont itemFromString:@"Main Menu" target:self selector:@selector(item3Touched:)];

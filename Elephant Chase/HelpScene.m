@@ -30,12 +30,10 @@
 	if ((self = [super init])){		
         
         
-        [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"you-win.caf"];
+
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"menu-item-selected.caf"];
         
         [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.5; 
-        
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"you-win.caf" loop:YES];
         
         
 		// wait a short moment before creating the menu so we can see it scroll in
