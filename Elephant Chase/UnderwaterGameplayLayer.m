@@ -170,6 +170,7 @@
     if ( sprite == elephant ) {
         [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-hurt.caf"];        
         CCLOG(@"elephant gets hurt animation");
+        [elephant runAction:[CCBlink actionWithDuration:2.0 blinks:10]];        
         //TODO: LOTS OF STUFF TODO HERE:
         //
         //-show bomb explosion!
@@ -184,6 +185,7 @@
         
     }else if ( sprite == hero ){
         [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];        
+        [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];        
         CCLOG(@"hero gets hurt animation");        
     }
     
@@ -305,7 +307,8 @@
 
             if ( CGRectContainsPoint(hero.boundingBox, elephant.position) ) {
                 CCLOG(@"ELEPHANT HIT HUMAN!!!");
-                
+                [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];
+                [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];
             }
             
         }
