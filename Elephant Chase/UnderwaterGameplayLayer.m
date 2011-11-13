@@ -13,6 +13,8 @@
 
 #import "SimpleAudioEngine.h"
 
+#import "LoadingScene.h"
+
 #define kDirectionalButtonLength 64.0f
 
 

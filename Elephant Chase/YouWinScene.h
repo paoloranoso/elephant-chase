@@ -13,4 +13,7 @@
 @interface YouWinScene : CCScene{
     
 }
+
++(CCScene *) scene;
+
 @end

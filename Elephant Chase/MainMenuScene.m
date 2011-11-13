@@ -108,6 +108,8 @@
 
 -(void) playButtonTouched:(id)sender{
     [[SimpleAudioEngine sharedEngine] playEffect:@"menu-item-selected.caf"];
+	LoadingScene* scene = [LoadingScene sceneWithTargetScene:TargetSceneUnderwaterLevel];    
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
 -(void) helpButtonTouched:(id)sender{

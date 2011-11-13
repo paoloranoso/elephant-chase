@@ -14,4 +14,6 @@
     
 }
 
++(CCScene *) scene;
+
 @end

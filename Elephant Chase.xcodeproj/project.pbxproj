@@ -149,7 +149,6 @@
 		EC521EFF146FB66A001F0BFF /* hero-left.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFD146FB66A001F0BFF /* hero-left.png */; };
 		EC521F00146FB66A001F0BFF /* hero-right.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFE146FB66A001F0BFF /* hero-right.png */; };
 		EC521F07146FC72B001F0BFF /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EC521F06146FC72B001F0BFF /* MainMenuScene.m */; };
-		EC521F0A146FC73E001F0BFF /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC521F09146FC73E001F0BFF /* MainMenuLayer.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
 		EC58A4C1146E6D6000E7A841 /* hero.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4C0146E6D6000E7A841 /* hero.png */; };
@@ -438,8 +437,6 @@
 		EC521EFE146FB66A001F0BFF /* hero-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero-right.png"; sourceTree = "<group>"; };
 		EC521F05146FC72B001F0BFF /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
 		EC521F06146FC72B001F0BFF /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
-		EC521F08146FC73E001F0BFF /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
-		EC521F09146FC73E001F0BFF /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
 		EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderwaterBackgroundLayer.m; sourceTree = "<group>"; };
 		EC58A4BD146E6ADE00E7A841 /* UnderwaterGameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterGameplayLayer.h; sourceTree = "<group>"; };
@@ -918,8 +915,6 @@
 				EC60C2BC146FD0EA00A3870F /* menu-item-selected.caf */,
 				EC521F05146FC72B001F0BFF /* MainMenuScene.h */,
 				EC521F06146FC72B001F0BFF /* MainMenuScene.m */,
-				EC521F08146FC73E001F0BFF /* MainMenuLayer.h */,
-				EC521F09146FC73E001F0BFF /* MainMenuLayer.m */,
 			);
 			name = "Main Menu";
 			sourceTree = "<group>";
@@ -1247,7 +1242,6 @@
 				EC58A4E2146E733900E7A841 /* SneakyJoystick.m in Sources */,
 				EC58A4E3146E733900E7A841 /* SneakyJoystickSkinnedBase.m in Sources */,
 				EC521F07146FC72B001F0BFF /* MainMenuScene.m in Sources */,
-				EC521F0A146FC73E001F0BFF /* MainMenuLayer.m in Sources */,
 				EC60C2D9146FE20B00A3870F /* LoadingScene.m in Sources */,
 				EC60C2DC146FE2E400A3870F /* HelpScene.m in Sources */,
 				EC60C2DF146FE2F800A3870F /* YouWinScene.m in Sources */,
