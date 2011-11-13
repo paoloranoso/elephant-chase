@@ -17,7 +17,8 @@
 @interface UnderwaterGameplayLayer(PrivateMethods)
 -(void)initDirectionalButtons;
 -(void)updateBoat;
--(void)itemContainsTouch:(UITouch *)touch;
+-(void)dropBombFromBoat;
+-(void)explodeBombOnSprite:(CCSprite *)sprite;
 @end
 
 @implementation UnderwaterGameplayLayer
@@ -43,10 +44,8 @@
         [self addChild:elephant];
         
         
-        
-        //TESTING
         bomb = [CCSprite spriteWithFile:@"bomb.png"];
-        [bomb setPosition:ccp(50.0f, screenSize.height*0.65f)];
+        [bomb setPosition:ccp(-50.0f, screenSize.height*0.65f)];
         [self addChild:bomb];
         
         
@@ -56,9 +55,12 @@
         [self initDirectionalButtons];
 
         
-        boatTimer = 10;
+        boatTimer = 1;
         boatInMotion = NO;
         
+        bombDroppedFromBoat = NO;
+        bombExploded = NO;
+        bombSpeedMultiplier = 1;
         
         //to determine hero movement from buttons
         [self scheduleUpdate];
@@ -115,6 +117,29 @@
 
 
 
+-(void)dropBombFromBoat{
+    //place the bomb where the boat is, update function will take care of it falling and collision detection also
+    CGPoint boatPosition = boat.position;    
+    bomb.position = boatPosition;
+    bombSpeedMultiplier = 1;
+    bombDroppedFromBoat = YES;
+}
+
+-(void)explodeBombOnSprite:(CCSprite *)sprite{
+    bombExploded = YES;
+    
+    //TODO: show bomb exploding particle effect
+    bomb.position = ccp(-50.0f, -50.0f);
+    
+    if ( sprite == elephant ) {
+        CCLOG(@"elephant gets hurt animation");
+    }else if ( sprite == hero ){
+        CCLOG(@"hero gets hurt animation");        
+    }
+    
+}
+
+
 #pragma mark -
 #pragma mark Update Methods
 -(void) update:(ccTime)deltaTime
@@ -143,11 +168,52 @@
     if ( boatInMotion ) {
         boat.position = ccp( boat.position.x - 100*deltaTime, boat.position.y );
         if (boat.position.x < -256) {
+            //boat needs to be reset and be put back to where it came from, gets a new bomb also
             boat.position = ccp( screenSize.width + 256.0f, boat.position.y );
             boatInMotion = NO;
+            bombDroppedFromBoat = NO;
+            bombExploded = NO;
+            bombSpeedMultiplier = 1;
         }    
     }
     
+    
+    
+    //bomb falling
+    if ( bombDroppedFromBoat && !bombExploded ) {
+        CGFloat newY = bomb.position.y - 5.0 * bombSpeedMultiplier * deltaTime;
+        bombSpeedMultiplier++;        
+        
+        bomb.position = ccp(bomb.position.x, newY);
+        
+        
+        //bomb hit elephant!
+        if ( CGRectContainsPoint(elephant.boundingBox, bomb.position) ) {
+            CCLOG(@"BOMB HIT ELEPHANT!");
+            [self explodeBombOnSprite:elephant];
+
+            //TODO: LOTS OF STUFF TODO HERE:
+            //
+            //-show bomb explosion!
+            //-decrease elephant health
+            //-if elephant health 0, you win!  do the following:
+            //      -play super explosion animation...maybe just lots of particle crap if no time?
+            //      -do all cleanup and replace scene with victory scene!
+            //-else
+            //  -elephant is stunned and is flashing...cannot move for 3 secs
+            //
+            //
+        }else if ( CGRectContainsPoint(hero.boundingBox, bomb.position) ){
+            CCLOG(@"BOMB HIT HERO!!!!");     
+            [self explodeBombOnSprite:hero];
+        }
+        else if( bomb.position.y < 0 ){
+            //explode on the ocean surface...should we see if the user gets hurt too and/or check if it hits the user?
+            CCLOG(@"bomb hit ocean floor");
+            [self explodeBombOnSprite:nil];
+        }
+    }
+        
     
 }
 
@@ -177,12 +243,17 @@
     CGPoint location = [self convertTouchToNodeSpace: touch];
     
     
-    //TODO: check if bomb already dropped
-    
-    
-    if ( CGRectContainsPoint(boat.boundingBox, location) ) {
-        //TODO: logic on dropping bomb here
+    //boat touched
+    if ( CGRectContainsPoint(boat.boundingBox, location) ) {        
         CCLOG(@"boat touched!");
+        
+        if ( !bombDroppedFromBoat ) {
+            CCLOG(@"dropped bomb from boat");
+            //drop bomb from boat here
+            [self dropBombFromBoat];
+        }
+        
+        
         return YES;
     }
     

@@ -16,6 +16,11 @@
     int boatTimer;
     BOOL boatInMotion;
     
+    BOOL bombDroppedFromBoat;
+    BOOL bombExploded;
+    int bombSpeedMultiplier;    
+    
+    
     CCSprite *hero;
     CCSprite *elephant;
     CCSprite *boat;
