@@ -12,8 +12,7 @@
 #import "HelloWorldLayer.h"
 #import "RootViewController.h"
 #import "GameConfig.h"
-#import "UnderwaterGameScene.h"
-#import "MainMenuScene.h"
+#import "LoadingScene.h"
 
 @implementation AppDelegate
 
@@ -112,7 +111,8 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [UnderwaterGameScene node]];
+	LoadingScene* scene = [LoadingScene sceneWithTargetScene:TargetSceneMainMenu];
+	[[CCDirector sharedDirector] runWithScene:scene];
 }
 
 

@@ -168,6 +168,10 @@
 		EC60C2C1146FDF4300A3870F /* you-lose.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2C0146FDF4300A3870F /* you-lose.caf */; };
 		EC60C2C3146FDF5200A3870F /* you-win.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2C2146FDF5200A3870F /* you-win.caf */; };
 		EC60C2C5146FDF5900A3870F /* main-menu.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2C4146FDF5900A3870F /* main-menu.caf */; };
+		EC60C2D9146FE20B00A3870F /* LoadingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60C2D8146FE20B00A3870F /* LoadingScene.m */; };
+		EC60C2DC146FE2E400A3870F /* HelpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60C2DB146FE2E400A3870F /* HelpScene.m */; };
+		EC60C2DF146FE2F800A3870F /* YouWinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60C2DE146FE2F800A3870F /* YouWinScene.m */; };
+		EC60C2E5146FE31400A3870F /* YouLoseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60C2E4146FE31400A3870F /* YouLoseScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -463,6 +467,14 @@
 		EC60C2C0146FDF4300A3870F /* you-lose.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "you-lose.caf"; sourceTree = "<group>"; };
 		EC60C2C2146FDF5200A3870F /* you-win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "you-win.caf"; sourceTree = "<group>"; };
 		EC60C2C4146FDF5900A3870F /* main-menu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "main-menu.caf"; sourceTree = "<group>"; };
+		EC60C2D7146FE20B00A3870F /* LoadingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScene.h; sourceTree = "<group>"; };
+		EC60C2D8146FE20B00A3870F /* LoadingScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScene.m; sourceTree = "<group>"; };
+		EC60C2DA146FE2E400A3870F /* HelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpScene.h; sourceTree = "<group>"; };
+		EC60C2DB146FE2E400A3870F /* HelpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpScene.m; sourceTree = "<group>"; };
+		EC60C2DD146FE2F800A3870F /* YouWinScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouWinScene.h; sourceTree = "<group>"; };
+		EC60C2DE146FE2F800A3870F /* YouWinScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouWinScene.m; sourceTree = "<group>"; };
+		EC60C2E3146FE31300A3870F /* YouLoseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouLoseScene.h; sourceTree = "<group>"; };
+		EC60C2E4146FE31400A3870F /* YouLoseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouLoseScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -520,6 +532,7 @@
 			isa = PBXGroup;
 			children = (
 				EC58A4E4146E7C9800E7A841 /* third party libraries */,
+				EC60C2D6146FE1F500A3870F /* Loading Scene */,
 				EC521F04146FC66E001F0BFF /* Help Scene */,
 				EC521F03146FC666001F0BFF /* You Win Scene */,
 				EC521F02146FC658001F0BFF /* You Lose Scene */,
@@ -915,6 +928,8 @@
 			isa = PBXGroup;
 			children = (
 				EC60C2C0146FDF4300A3870F /* you-lose.caf */,
+				EC60C2E3146FE31300A3870F /* YouLoseScene.h */,
+				EC60C2E4146FE31400A3870F /* YouLoseScene.m */,
 			);
 			name = "You Lose Scene";
 			sourceTree = "<group>";
@@ -924,6 +939,8 @@
 			children = (
 				EC60C2C2146FDF5200A3870F /* you-win.caf */,
 				EC60C2B9146FD05400A3870F /* win.png */,
+				EC60C2DD146FE2F800A3870F /* YouWinScene.h */,
+				EC60C2DE146FE2F800A3870F /* YouWinScene.m */,
 			);
 			name = "You Win Scene";
 			sourceTree = "<group>";
@@ -931,6 +948,8 @@
 		EC521F04146FC66E001F0BFF /* Help Scene */ = {
 			isa = PBXGroup;
 			children = (
+				EC60C2DA146FE2E400A3870F /* HelpScene.h */,
+				EC60C2DB146FE2E400A3870F /* HelpScene.m */,
 			);
 			name = "Help Scene";
 			sourceTree = "<group>";
@@ -1005,6 +1024,15 @@
 				EC58A4C6146E733900E7A841 /* SneakyInput */,
 			);
 			name = "third party libraries";
+			sourceTree = "<group>";
+		};
+		EC60C2D6146FE1F500A3870F /* Loading Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EC60C2D7146FE20B00A3870F /* LoadingScene.h */,
+				EC60C2D8146FE20B00A3870F /* LoadingScene.m */,
+			);
+			name = "Loading Scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1220,6 +1248,10 @@
 				EC58A4E3146E733900E7A841 /* SneakyJoystickSkinnedBase.m in Sources */,
 				EC521F07146FC72B001F0BFF /* MainMenuScene.m in Sources */,
 				EC521F0A146FC73E001F0BFF /* MainMenuLayer.m in Sources */,
+				EC60C2D9146FE20B00A3870F /* LoadingScene.m in Sources */,
+				EC60C2DC146FE2E400A3870F /* HelpScene.m in Sources */,
+				EC60C2DF146FE2F800A3870F /* YouWinScene.m in Sources */,
+				EC60C2E5146FE31400A3870F /* YouLoseScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  MainMenuScene.h
+//  YouLoseScene.h
 //  Elephant Chase
 //
 //  Created by Paolo Ranoso on 11/13/11.
@@ -10,10 +10,8 @@
 
 #import "cocos2d.h"
 
-@interface MainMenuScene : CCScene{
+@interface YouLoseScene : CCScene{
     
 }
-
-+(id)scene;
 
 @end
