@@ -136,6 +136,15 @@
 		EC521EE4146F55F4001F0BFF /* fire.pvr in Resources */ = {isa = PBXBuildFile; fileRef = EC521EE0146F55F4001F0BFF /* fire.pvr */; };
 		EC521EE5146F55F4001F0BFF /* fire_rgba8888.pvr in Resources */ = {isa = PBXBuildFile; fileRef = EC521EE1146F55F4001F0BFF /* fire_rgba8888.pvr */; };
 		EC521EE7146F58DF001F0BFF /* ExplodingRing.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC521EE6146F58DF001F0BFF /* ExplodingRing.plist */; };
+		EC521EF2146F6904001F0BFF /* boat.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EE9146F6904001F0BFF /* boat.caf */; };
+		EC521EF3146F6904001F0BFF /* elephant-attack.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EEA146F6904001F0BFF /* elephant-attack.caf */; };
+		EC521EF4146F6904001F0BFF /* elephant-dies.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EEB146F6904001F0BFF /* elephant-dies.caf */; };
+		EC521EF5146F6904001F0BFF /* elephant-hurt.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EEC146F6904001F0BFF /* elephant-hurt.caf */; };
+		EC521EF6146F6904001F0BFF /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EED146F6904001F0BFF /* explosion.caf */; };
+		EC521EF7146F6904001F0BFF /* fart.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EEE146F6904001F0BFF /* fart.caf */; };
+		EC521EF8146F6904001F0BFF /* ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EEF146F6904001F0BFF /* ow.caf */; };
+		EC521EF9146F6904001F0BFF /* swim.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EF0146F6904001F0BFF /* swim.caf */; };
+		EC521EFA146F6904001F0BFF /* thud.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EF1146F6904001F0BFF /* thud.caf */; };
 		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
@@ -401,6 +410,15 @@
 		EC521EE0146F55F4001F0BFF /* fire.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.pvr; sourceTree = "<group>"; };
 		EC521EE1146F55F4001F0BFF /* fire_rgba8888.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire_rgba8888.pvr; sourceTree = "<group>"; };
 		EC521EE6146F58DF001F0BFF /* ExplodingRing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExplodingRing.plist; sourceTree = "<group>"; };
+		EC521EE9146F6904001F0BFF /* boat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = boat.caf; sourceTree = "<group>"; };
+		EC521EEA146F6904001F0BFF /* elephant-attack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "elephant-attack.caf"; sourceTree = "<group>"; };
+		EC521EEB146F6904001F0BFF /* elephant-dies.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "elephant-dies.caf"; sourceTree = "<group>"; };
+		EC521EEC146F6904001F0BFF /* elephant-hurt.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "elephant-hurt.caf"; sourceTree = "<group>"; };
+		EC521EED146F6904001F0BFF /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
+		EC521EEE146F6904001F0BFF /* fart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fart.caf; sourceTree = "<group>"; };
+		EC521EEF146F6904001F0BFF /* ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow.caf; sourceTree = "<group>"; };
+		EC521EF0146F6904001F0BFF /* swim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swim.caf; sourceTree = "<group>"; };
+		EC521EF1146F6904001F0BFF /* thud.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = thud.caf; sourceTree = "<group>"; };
 		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
 		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
@@ -840,9 +858,27 @@
 			path = "particle-stuff";
 			sourceTree = "<group>";
 		};
+		EC521EE8146F6904001F0BFF /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EC521EE9146F6904001F0BFF /* boat.caf */,
+				EC521EEA146F6904001F0BFF /* elephant-attack.caf */,
+				EC521EEB146F6904001F0BFF /* elephant-dies.caf */,
+				EC521EEC146F6904001F0BFF /* elephant-hurt.caf */,
+				EC521EED146F6904001F0BFF /* explosion.caf */,
+				EC521EEE146F6904001F0BFF /* fart.caf */,
+				EC521EEF146F6904001F0BFF /* ow.caf */,
+				EC521EF0146F6904001F0BFF /* swim.caf */,
+				EC521EF1146F6904001F0BFF /* thud.caf */,
+			);
+			name = sounds;
+			path = "underwater-level-sounds";
+			sourceTree = "<group>";
+		};
 		EC58A4A5146E5F2100E7A841 /* Underwater Level */ = {
 			isa = PBXGroup;
 			children = (
+				EC521EE8146F6904001F0BFF /* sounds */,
 				EC58A4B1146E675000E7A841 /* images */,
 				EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */,
 				EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */,
@@ -1007,6 +1043,15 @@
 				EC521EE4146F55F4001F0BFF /* fire.pvr in Resources */,
 				EC521EE5146F55F4001F0BFF /* fire_rgba8888.pvr in Resources */,
 				EC521EE7146F58DF001F0BFF /* ExplodingRing.plist in Resources */,
+				EC521EF2146F6904001F0BFF /* boat.caf in Resources */,
+				EC521EF3146F6904001F0BFF /* elephant-attack.caf in Resources */,
+				EC521EF4146F6904001F0BFF /* elephant-dies.caf in Resources */,
+				EC521EF5146F6904001F0BFF /* elephant-hurt.caf in Resources */,
+				EC521EF6146F6904001F0BFF /* explosion.caf in Resources */,
+				EC521EF7146F6904001F0BFF /* fart.caf in Resources */,
+				EC521EF8146F6904001F0BFF /* ow.caf in Resources */,
+				EC521EF9146F6904001F0BFF /* swim.caf in Resources */,
+				EC521EFA146F6904001F0BFF /* thud.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

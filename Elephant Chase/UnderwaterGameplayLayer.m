@@ -48,12 +48,7 @@
         [bomb setPosition:ccp(-50.0f, screenSize.height*0.65f)];
         [self addChild:bomb];
         
-        
-        //TODO: more sprite adding here for elephant, boat, bomb
-    
-        
         [self initDirectionalButtons];
-
         
         boatTimer = 1;
         boatInMotion = NO;
@@ -62,7 +57,7 @@
         bombExploded = NO;
         bombSpeedMultiplier = 1;
         
-        //to determine hero movement from buttons
+        //update to determine movements and events
         [self scheduleUpdate];
         
         //to randomly make the boat come by every 5-15 secs
@@ -143,6 +138,18 @@
     //TODO: ELEPHANT/HUMAN HURTING AND GAME OVER/WIN
     if ( sprite == elephant ) {
         CCLOG(@"elephant gets hurt animation");
+        //TODO: LOTS OF STUFF TODO HERE:
+        //
+        //-show bomb explosion!
+        //-decrease elephant health
+        //-if elephant health 0, you win!  do the following:
+        //      -play super explosion animation...maybe just lots of particle crap if no time?
+        //      -do all cleanup and replace scene with victory scene!
+        //-else
+        //  -elephant is stunned and is flashing...cannot move for 3 secs
+        //
+        //        
+        
     }else if ( sprite == hero ){
         CCLOG(@"hero gets hurt animation");        
     }
@@ -201,24 +208,12 @@
         if ( CGRectContainsPoint(elephant.boundingBox, bomb.position) ) {
             CCLOG(@"BOMB HIT ELEPHANT!");
             [self explodeBombOnSprite:elephant];
-
-            //TODO: LOTS OF STUFF TODO HERE:
-            //
-            //-show bomb explosion!
-            //-decrease elephant health
-            //-if elephant health 0, you win!  do the following:
-            //      -play super explosion animation...maybe just lots of particle crap if no time?
-            //      -do all cleanup and replace scene with victory scene!
-            //-else
-            //  -elephant is stunned and is flashing...cannot move for 3 secs
-            //
-            //
         }else if ( CGRectContainsPoint(hero.boundingBox, bomb.position) ){
             CCLOG(@"BOMB HIT HERO!!!!");     
             [self explodeBombOnSprite:hero];
         }
         else if( bomb.position.y < 0 ){
-            //explode on the ocean surface...should we see if the user gets hurt too and/or check if it hits the user?
+            //explode on the ocean surface
             CCLOG(@"bomb hit ocean floor");
             [self explodeBombOnSprite:nil];
         }
