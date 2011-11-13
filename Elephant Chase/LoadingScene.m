@@ -60,11 +60,17 @@
 	switch (targetScene_)
 	{
 		case TargetSceneMainMenu:
-			[[CCDirector sharedDirector] replaceScene:[MainMenuScene scene]];
+		{
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[MainMenuScene scene] withColor:ccWHITE];
+			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
+		}
 		case TargetSceneHelp:
-//			[[CCDirector sharedDirector] replaceScene:[OtherScene scene]];
+		{
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[HelpScene scene] withColor:ccWHITE];
+			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
+		}
 		case TargetSceneUnderwaterLevel:
             // Important note: if you create new local variables within a case block, it must be put in brackets.
             // Otherwise you'll receive a compilation error "Expected expression before ..."
@@ -74,12 +80,17 @@
 			break;
 		}
 		case TargetSceneYouLose:
-//			[[CCDirector sharedDirector] replaceScene:[ParallaxScene scene]];
+		{
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[YouLoseScene scene] withColor:ccWHITE];
+			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
+		}
 		case TargetSceneYouWin:
-//			[[CCDirector sharedDirector] replaceScene:[ParallaxScene scene]];
+		{
+			CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:3 scene:[YouWinScene scene] withColor:ccWHITE];
+			[[CCDirector sharedDirector] replaceScene:transition];
 			break;
-			
+		}
 		default:
 			// Always warn if an unspecified enum value was used. It's a reminder for yourself to update the switch
 			// whenever you add more enum values.
