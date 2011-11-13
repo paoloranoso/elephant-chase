@@ -52,7 +52,7 @@
         
         [self initDirectionalButtons];
         
-        boatTimer = 1;
+        boatTimer = 3;
         boatInMotion = NO;
         
         bombDroppedFromBoat = NO;
@@ -72,6 +72,8 @@
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"ow.caf"];
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"swim.caf"];        
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"thud.caf"];
+        
+        [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.5; 
         
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ocean-bg-music.caf" loop:YES];
         
@@ -253,7 +255,7 @@
         boatInMotion = YES;
         
         //Reset boatTimer by getting a random number between 5 and 15...this is the number of seconds we wait till the boat comes again
-        boatTimer =  (arc4random() % 16) + 5;        
+        boatTimer =  (arc4random() % 11) + 5;        
         CCLOG(@"boatTimer reset to %d seconds", boatTimer);
         
     [[SimpleAudioEngine sharedEngine] playEffect:@"boat.caf"];        
