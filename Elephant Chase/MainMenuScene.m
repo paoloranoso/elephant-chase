@@ -15,8 +15,6 @@
 // private methods are declared in this manner to avoid "may not respond to ..." compiler warnings
 @interface MainMenuScene (PrivateMethods)
 -(void) createMenu:(ccTime)delta;
--(void) changeScene:(id)sender;
--(void) goBackToPreviousScene;
 -(void) titleButtonTouched:(id)sender;
 -(void) playButtonTouched:(id)sender;
 -(void) helpButtonTouched:(id)sender;
@@ -80,27 +78,6 @@
 	[menu runAction:ease];
 }
 
--(void) goBackToPreviousScene
-{
-	// get the menu back
-	CCNode* node = [self getChildByTag:100];
-	NSAssert([node isKindOfClass:[CCMenu class]], @"node is not a CCMenu!");
-    
-	CCMenu* menu = (CCMenu*)node;
-    
-	// lets move the menu out using a sequence
-	CGSize size = [[CCDirector sharedDirector] winSize];
-	CCMoveTo* move = [CCMoveTo actionWithDuration:1 position:CGPointMake(-(size.width / 2), size.height / 2)];
-	CCEaseBackInOut* ease = [CCEaseBackInOut actionWithAction:move];
-	CCCallFunc* func = [CCCallFunc actionWithTarget:self selector:@selector(changeScene:)];
-	CCSequence* sequence = [CCSequence actions:ease, func, nil];
-	[menu runAction:sequence];
-}
-
--(void) changeScene:(id)sender
-{
-//	[[CCDirector sharedDirector] replaceScene:[HelloWorld scene]];
-}
 
 -(void)titleButtonTouched:(id)sender{
     [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-attack.caf"];    
