@@ -162,6 +162,7 @@
 		EC58A4E2146E733900E7A841 /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D6146E733900E7A841 /* SneakyJoystick.m */; };
 		EC58A4E3146E733900E7A841 /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4D8146E733900E7A841 /* SneakyJoystickSkinnedBase.m */; };
 		EC58A4E6146E7CB000E7A841 /* boat.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4E5146E7CB000E7A841 /* boat.png */; };
+		EC60C2BA146FD05400A3870F /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2B9146FD05400A3870F /* win.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -451,6 +452,7 @@
 		EC58A4D7146E733900E7A841 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
 		EC58A4D8146E733900E7A841 /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
 		EC58A4E5146E7CB000E7A841 /* boat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boat.png; sourceTree = "<group>"; };
+		EC60C2B9146FD05400A3870F /* win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -907,6 +909,7 @@
 		EC521F03146FC666001F0BFF /* You Win Scene */ = {
 			isa = PBXGroup;
 			children = (
+				EC60C2B9146FD05400A3870F /* win.png */,
 			);
 			name = "You Win Scene";
 			sourceTree = "<group>";
@@ -1077,6 +1080,7 @@
 				EC521EFC146F6A76001F0BFF /* ocean-bg-music.caf in Resources */,
 				EC521EFF146FB66A001F0BFF /* hero-left.png in Resources */,
 				EC521F00146FB66A001F0BFF /* hero-right.png in Resources */,
+				EC60C2BA146FD05400A3870F /* win.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
