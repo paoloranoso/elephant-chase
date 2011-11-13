@@ -29,6 +29,8 @@
     SneakyButton *leftButton; 
     SneakyButton *rightButton;    
     
+    CCParticleExplosion *particleExplosion;
+    
     CGSize screenSize;
 }
 

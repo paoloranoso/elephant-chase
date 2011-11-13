@@ -125,12 +125,22 @@
     bombDroppedFromBoat = YES;
 }
 
--(void)explodeBombOnSprite:(CCSprite *)sprite{
+-(void)explodeBombOnSprite:(CCSprite *)sprite{    
+    //bomb exploding
+    particleExplosion = [[[CCParticleExplosion alloc] init] autorelease];
+
+    particleExplosion.position = bomb.position;
+    particleExplosion.endSize = 1;    
+    [self addChild:particleExplosion z:3.0];
+    particleExplosion.autoRemoveOnFinish = YES;
+
+    
+    //bomb reset
     bombExploded = YES;
-    
-    //TODO: show bomb exploding particle effect
     bomb.position = ccp(-50.0f, -50.0f);
+
     
+    //TODO: ELEPHANT/HUMAN HURTING AND GAME OVER/WIN
     if ( sprite == elephant ) {
         CCLOG(@"elephant gets hurt animation");
     }else if ( sprite == hero ){

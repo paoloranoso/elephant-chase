@@ -131,6 +131,11 @@
 		EC521E9A146F0AC1001F0BFF /* elephant1.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E98146F0AC1001F0BFF /* elephant1.png */; };
 		EC521E9B146F0AC1001F0BFF /* elephant0.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521E99146F0AC1001F0BFF /* elephant0.png */; };
 		EC521EA1146F24F2001F0BFF /* cargo-ship.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EA0146F24F2001F0BFF /* cargo-ship.png */; };
+		EC521EE2146F55F4001F0BFF /* fire-grayscale.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EDE146F55F4001F0BFF /* fire-grayscale.png */; };
+		EC521EE3146F55F4001F0BFF /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EDF146F55F4001F0BFF /* fire.png */; };
+		EC521EE4146F55F4001F0BFF /* fire.pvr in Resources */ = {isa = PBXBuildFile; fileRef = EC521EE0146F55F4001F0BFF /* fire.pvr */; };
+		EC521EE5146F55F4001F0BFF /* fire_rgba8888.pvr in Resources */ = {isa = PBXBuildFile; fileRef = EC521EE1146F55F4001F0BFF /* fire_rgba8888.pvr */; };
+		EC521EE7146F58DF001F0BFF /* ExplodingRing.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC521EE6146F58DF001F0BFF /* ExplodingRing.plist */; };
 		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
@@ -391,6 +396,11 @@
 		EC521E98146F0AC1001F0BFF /* elephant1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant1.png; sourceTree = "<group>"; };
 		EC521E99146F0AC1001F0BFF /* elephant0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant0.png; sourceTree = "<group>"; };
 		EC521EA0146F24F2001F0BFF /* cargo-ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cargo-ship.png"; sourceTree = "<group>"; };
+		EC521EDE146F55F4001F0BFF /* fire-grayscale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire-grayscale.png"; sourceTree = "<group>"; };
+		EC521EDF146F55F4001F0BFF /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		EC521EE0146F55F4001F0BFF /* fire.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.pvr; sourceTree = "<group>"; };
+		EC521EE1146F55F4001F0BFF /* fire_rgba8888.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire_rgba8888.pvr; sourceTree = "<group>"; };
+		EC521EE6146F58DF001F0BFF /* ExplodingRing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExplodingRing.plist; sourceTree = "<group>"; };
 		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
 		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
@@ -470,6 +480,7 @@
 		EC1929E3146E1A4D001D072A /* Elephant Chase */ = {
 			isa = PBXGroup;
 			children = (
+				EC521EDD146F55F4001F0BFF /* particle-stuff */,
 				EC58A4E4146E7C9800E7A841 /* third party libraries */,
 				EC58A4A7146E62B700E7A841 /* config */,
 				EC58A4AB146E64AC00E7A841 /* helpers */,
@@ -817,6 +828,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EC521EDD146F55F4001F0BFF /* particle-stuff */ = {
+			isa = PBXGroup;
+			children = (
+				EC521EE6146F58DF001F0BFF /* ExplodingRing.plist */,
+				EC521EDE146F55F4001F0BFF /* fire-grayscale.png */,
+				EC521EDF146F55F4001F0BFF /* fire.png */,
+				EC521EE0146F55F4001F0BFF /* fire.pvr */,
+				EC521EE1146F55F4001F0BFF /* fire_rgba8888.pvr */,
+			);
+			path = "particle-stuff";
+			sourceTree = "<group>";
+		};
 		EC58A4A5146E5F2100E7A841 /* Underwater Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -979,6 +1002,11 @@
 				EC521E9A146F0AC1001F0BFF /* elephant1.png in Resources */,
 				EC521E9B146F0AC1001F0BFF /* elephant0.png in Resources */,
 				EC521EA1146F24F2001F0BFF /* cargo-ship.png in Resources */,
+				EC521EE2146F55F4001F0BFF /* fire-grayscale.png in Resources */,
+				EC521EE3146F55F4001F0BFF /* fire.png in Resources */,
+				EC521EE4146F55F4001F0BFF /* fire.pvr in Resources */,
+				EC521EE5146F55F4001F0BFF /* fire_rgba8888.pvr in Resources */,
+				EC521EE7146F58DF001F0BFF /* ExplodingRing.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1171,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Paolo Ranoso (VX86QJUJ98)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1152,6 +1181,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D0523203-59BC-4B27-8294-668FE3DA9BC2";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1161,6 +1191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Paolo Ranoso (VX86QJUJ98)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Elephant Chase/Prefix.pch";
@@ -1169,6 +1200,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D0523203-59BC-4B27-8294-668FE3DA9BC2";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
