@@ -11,6 +11,8 @@
 
 #import "CCTouchDispatcher.h"
 
+#import "SimpleAudioEngine.h"
+
 #define kDirectionalButtonLength 64.0f
 
 
@@ -56,6 +58,23 @@
         bombDroppedFromBoat = NO;
         bombExploded = NO;
         bombSpeedMultiplier = 1;
+        
+        
+        
+        
+        //SOUNDZZzZz
+        [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"ocean-bg-music.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"boat.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"elephant-attack.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"elephant-hurt.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"elephant-dies.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"explosion.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"ow.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"swim.caf"];        
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"thud.caf"];
+        
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ocean-bg-music.caf" loop:YES];
+        
         
         //update to determine movements and events
         [self scheduleUpdate];
@@ -122,6 +141,7 @@
 
 -(void)explodeBombOnSprite:(CCSprite *)sprite{    
     //bomb exploding
+    [[SimpleAudioEngine sharedEngine] playEffect:@"explosion.caf"];
     particleExplosion = [[[CCParticleExplosion alloc] init] autorelease];
 
     particleExplosion.position = bomb.position;
@@ -137,6 +157,7 @@
     
     //TODO: ELEPHANT/HUMAN HURTING AND GAME OVER/WIN
     if ( sprite == elephant ) {
+        [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-hurt.caf"];        
         CCLOG(@"elephant gets hurt animation");
         //TODO: LOTS OF STUFF TODO HERE:
         //
@@ -151,6 +172,7 @@
         //        
         
     }else if ( sprite == hero ){
+        [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];        
         CCLOG(@"hero gets hurt animation");        
     }
     
@@ -172,7 +194,6 @@
     if (rightButton.active == YES) {
         if ( hero.position.x > (screenSize.width - 32) ) {
             //do nothing because he'll go off screen
-            [self removeChild:bomb cleanup:YES]; 
         }else{
             hero.position = ccp( hero.position.x + 150*deltaTime, hero.position.y);
         }
@@ -234,6 +255,8 @@
         //Reset boatTimer by getting a random number between 5 and 15...this is the number of seconds we wait till the boat comes again
         boatTimer =  (arc4random() % 16) + 5;        
         CCLOG(@"boatTimer reset to %d seconds", boatTimer);
+        
+    [[SimpleAudioEngine sharedEngine] playEffect:@"boat.caf"];        
     }
 }
 
