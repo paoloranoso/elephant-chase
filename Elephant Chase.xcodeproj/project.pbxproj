@@ -164,6 +164,7 @@
 		EC58A4E6146E7CB000E7A841 /* boat.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4E5146E7CB000E7A841 /* boat.png */; };
 		EC60C2BA146FD05400A3870F /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2B9146FD05400A3870F /* win.png */; };
 		EC60C2BD146FD0EA00A3870F /* menu-item-selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2BC146FD0EA00A3870F /* menu-item-selected.caf */; };
+		EC60C2BF146FD5B100A3870F /* peanut.png in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2BE146FD5B100A3870F /* peanut.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -455,6 +456,7 @@
 		EC58A4E5146E7CB000E7A841 /* boat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boat.png; sourceTree = "<group>"; };
 		EC60C2B9146FD05400A3870F /* win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win.png; sourceTree = "<group>"; };
 		EC60C2BC146FD0EA00A3870F /* menu-item-selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "menu-item-selected.caf"; sourceTree = "<group>"; };
+		EC60C2BE146FD5B100A3870F /* peanut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peanut.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -942,6 +944,7 @@
 		EC58A4B1146E675000E7A841 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EC60C2BE146FD5B100A3870F /* peanut.png */,
 				EC521EFD146FB66A001F0BFF /* hero-left.png */,
 				EC521EFE146FB66A001F0BFF /* hero-right.png */,
 				EC521E98146F0AC1001F0BFF /* elephant1.png */,
@@ -1085,6 +1088,7 @@
 				EC521F00146FB66A001F0BFF /* hero-right.png in Resources */,
 				EC60C2BA146FD05400A3870F /* win.png in Resources */,
 				EC60C2BD146FD0EA00A3870F /* menu-item-selected.caf in Resources */,
+				EC60C2BF146FD5B100A3870F /* peanut.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
