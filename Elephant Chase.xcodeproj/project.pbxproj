@@ -165,6 +165,9 @@
 		EC60C2BA146FD05400A3870F /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2B9146FD05400A3870F /* win.png */; };
 		EC60C2BD146FD0EA00A3870F /* menu-item-selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2BC146FD0EA00A3870F /* menu-item-selected.caf */; };
 		EC60C2BF146FD5B100A3870F /* peanut.png in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2BE146FD5B100A3870F /* peanut.png */; };
+		EC60C2C1146FDF4300A3870F /* you-lose.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2C0146FDF4300A3870F /* you-lose.caf */; };
+		EC60C2C3146FDF5200A3870F /* you-win.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2C2146FDF5200A3870F /* you-win.caf */; };
+		EC60C2C5146FDF5900A3870F /* main-menu.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC60C2C4146FDF5900A3870F /* main-menu.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -457,6 +460,9 @@
 		EC60C2B9146FD05400A3870F /* win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win.png; sourceTree = "<group>"; };
 		EC60C2BC146FD0EA00A3870F /* menu-item-selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "menu-item-selected.caf"; sourceTree = "<group>"; };
 		EC60C2BE146FD5B100A3870F /* peanut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peanut.png; sourceTree = "<group>"; };
+		EC60C2C0146FDF4300A3870F /* you-lose.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "you-lose.caf"; sourceTree = "<group>"; };
+		EC60C2C2146FDF5200A3870F /* you-win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "you-win.caf"; sourceTree = "<group>"; };
+		EC60C2C4146FDF5900A3870F /* main-menu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "main-menu.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -895,6 +901,7 @@
 		EC521F01146FC655001F0BFF /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				EC60C2C4146FDF5900A3870F /* main-menu.caf */,
 				EC60C2BC146FD0EA00A3870F /* menu-item-selected.caf */,
 				EC521F05146FC72B001F0BFF /* MainMenuScene.h */,
 				EC521F06146FC72B001F0BFF /* MainMenuScene.m */,
@@ -907,6 +914,7 @@
 		EC521F02146FC658001F0BFF /* You Lose Scene */ = {
 			isa = PBXGroup;
 			children = (
+				EC60C2C0146FDF4300A3870F /* you-lose.caf */,
 			);
 			name = "You Lose Scene";
 			sourceTree = "<group>";
@@ -914,6 +922,7 @@
 		EC521F03146FC666001F0BFF /* You Win Scene */ = {
 			isa = PBXGroup;
 			children = (
+				EC60C2C2146FDF5200A3870F /* you-win.caf */,
 				EC60C2B9146FD05400A3870F /* win.png */,
 			);
 			name = "You Win Scene";
@@ -1089,6 +1098,9 @@
 				EC60C2BA146FD05400A3870F /* win.png in Resources */,
 				EC60C2BD146FD0EA00A3870F /* menu-item-selected.caf in Resources */,
 				EC60C2BF146FD5B100A3870F /* peanut.png in Resources */,
+				EC60C2C1146FDF4300A3870F /* you-lose.caf in Resources */,
+				EC60C2C3146FDF5200A3870F /* you-win.caf in Resources */,
+				EC60C2C5146FDF5900A3870F /* main-menu.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

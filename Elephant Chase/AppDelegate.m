@@ -13,6 +13,7 @@
 #import "RootViewController.h"
 #import "GameConfig.h"
 #import "UnderwaterGameScene.h"
+#import "MainMenuScene.h"
 
 @implementation AppDelegate
 
