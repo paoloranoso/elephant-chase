@@ -71,7 +71,11 @@
         heroRageMultiplier = 1;
         
         heroLife = 3;
-        elephantLife = 5;
+        elephantLife = 3;
+        
+        gameOver = NO;
+        gameWon = NO;
+        gameLost = NO;
         
         
         //SOUNDZZzZz
@@ -172,7 +176,6 @@
     bomb.position = ccp(-50.0f, -50.0f);
 
     
-    //TODO: ELEPHANT/HUMAN HURTING AND GAME OVER/WIN
     if ( sprite == elephant ) {
         elephantLife--;
         
@@ -209,10 +212,7 @@
 
 
 -(void)characterDied:(CCSprite *)sprite{
-    CCLOG(@"===character died called===");
-    [self unscheduleAllSelectors];
-    [self unscheduleUpdate];
-    
+    CCLOG(@"===character died called===");    
     if ( sprite == elephant ) {
         [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-dies.caf"];
         
@@ -223,9 +223,9 @@
         [self addChild:particleExplosion z:3.0];
         particleExplosion.autoRemoveOnFinish = YES;
         
-        [self removeChild:elephant cleanup:YES];
-        
-        //TODO: win screen
+//        [self removeChild:elephant cleanup:YES];
+        elephant.visible = NO;        
+        gameWon = YES;
     }
     
     if ( sprite == hero ) {
@@ -238,11 +238,12 @@
         [self addChild:particleExplosion z:3.0];
         particleExplosion.autoRemoveOnFinish = YES;
         
-        [self removeChild:hero cleanup:YES];
-        
-        //TODO: lose screen
-    }
+//        [self removeChild:hero cleanup:YES];
+        hero.visible = NO;
+        gameLost = YES;
+    }    
     
+    gameOver = YES;
     
 }
 
@@ -347,7 +348,7 @@
     }
     
     if ( isElephantStomping ) {
-        CGFloat newY = elephant.position.y - 20.0 * elephantSpeedMultiplierY * elephantRageMultiplier * deltaTime;
+        CGFloat newY = elephant.position.y - 5.0 * elephantSpeedMultiplierY * elephantRageMultiplier * deltaTime;
         elephantSpeedMultiplierY++;        
         
         elephant.position = ccp(elephant.position.x, newY);
@@ -397,6 +398,18 @@
 //            CCLOG(@"elephant completed move up, stuff reset and ready to chase again!");
         }
         
+    }
+    
+    if ( gameOver ) {
+        [self unscheduleAllSelectors];
+        [self unscheduleUpdate];
+        
+        //TODO: show win or lose scenes accordingly
+        if ( gameWon ) {
+            
+        }else if ( gameLost ){
+            
+        }
     }
     
 }

@@ -32,6 +32,10 @@
     int heroLife;
     int elephantLife;
     
+    BOOL gameOver;
+    BOOL gameWon;
+    BOOL gameLost;
+    
     
     CCSprite *hero;
     CCSprite *elephant;
