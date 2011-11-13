@@ -39,6 +39,14 @@
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"you-win.caf" loop:YES];
         
         
+        //background
+        CCSprite *background = [CCSprite spriteWithFile:@"win.png"];
+        
+        CGSize screenSize = [[CCDirector sharedDirector] winSize];
+        [background setPosition: ccp(screenSize.width/2, screenSize.height/2)];
+        [self addChild:background z:0 tag:0];               
+        
+        
 		// wait a short moment before creating the menu so we can see it scroll in
 		[self schedule:@selector(createMenu:) interval:1];
 	}

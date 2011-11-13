@@ -16,6 +16,8 @@
 @interface HelpScene (PrivateMethods)
 -(void) createMenu:(ccTime)delta;
 -(void) item1Touched:(id)sender;
+-(void) item2Touched:(id)sender;
+-(void) item3Touched:(id)sender;
 @end
 
 @implementation HelpScene
@@ -32,7 +34,7 @@
         
 
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"menu-item-selected.caf"];
-        
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"elephant-attack.caf"];        
         [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.5; 
         
         
@@ -53,10 +55,13 @@
 	[CCMenuItemFont setFontName:@"Helvetica-BoldOblique"];
 	[CCMenuItemFont setFontSize:40];
 	
-	CCMenuItemFont* item1 = [CCMenuItemFont itemFromString:@"Back" target:self selector:@selector(item1Touched:)];
+	CCMenuItemFont* item1 = [CCMenuItemFont itemFromString:@"1) Dodge the elephant" target:self selector:@selector(item1Touched:)];
+	CCMenuItemFont* item2 = [CCMenuItemFont itemFromString:@"2) Tap on the ship to drop bombs on the elephant" target:self selector:@selector(item2Touched:)];
+	[CCMenuItemFont setFontSize:80];
+	CCMenuItemFont* item3 = [CCMenuItemFont itemFromString:@"Back" target:self selector:@selector(item3Touched:)];
 	
 	// create the menu using the items
-	CCMenu* menu = [CCMenu menuWithItems:item1, nil];
+	CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, nil];
 	menu.position = CGPointMake(-(size.width / 2), (size.height / 3)*2  ) ;
 	menu.tag = 100;
 	[self addChild:menu];
@@ -72,6 +77,14 @@
 
 
 -(void)item1Touched:(id)sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-attack.caf"];
+}
+
+-(void)item2Touched:(id)sender{
+    [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-attack.caf"];
+}
+
+-(void)item3Touched:(id)sender{
     [[SimpleAudioEngine sharedEngine] playEffect:@"menu-item-selected.caf"];
 	LoadingScene* scene = [LoadingScene sceneWithTargetScene:TargetSceneMainMenu];    
     [[CCDirector sharedDirector] replaceScene:scene];

@@ -72,8 +72,8 @@
         elephantRageMultiplier = 1;
         heroRageMultiplier = 1;
         
-        heroLife = 1;
-        elephantLife = 1;
+        heroLife = 3;
+        elephantLife = 3;
         
         gameOver = NO;
         gameWon = NO;
@@ -428,7 +428,7 @@
         boatInMotion = YES;
         
         //Reset boatTimer by getting a random number between 5 and 15...this is the number of seconds we wait till the boat comes again
-        boatTimer =  (arc4random() % 6) + 5;        
+        boatTimer =  (arc4random() % 3) + 5;        
         CCLOG(@"boatTimer reset to %d seconds", boatTimer);
         
     [[SimpleAudioEngine sharedEngine] playEffect:@"boat.caf"];        
