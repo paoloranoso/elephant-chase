@@ -22,6 +22,7 @@
 -(void)dropBombFromBoat;
 -(void)explodeBombOnSprite:(CCSprite *)sprite;
 -(void)updateElephantChasing;
+-(void)moveElephantUpAgain;
 @end
 
 @implementation UnderwaterGameplayLayer
@@ -43,7 +44,7 @@
         [self addChild:boat];
          
         elephant = [CCSprite spriteWithFile:@"elephant0.png"];
-        [elephant setPosition:ccp(-256.0f, screenSize.height*0.50f)];
+        [elephant setPosition:ccp(-256.0f, screenSize.height*0.55f)];
         [self addChild:elephant];
         
         
@@ -188,6 +189,14 @@
     
 }
 
+-(void)moveElephantUpAgain{
+    elephantStomped = YES;
+    isElephantStomping = NO;
+    
+    
+    
+}
+
 
 #pragma mark -
 #pragma mark Update Methods
@@ -243,7 +252,7 @@
             CCLOG(@"BOMB HIT HERO!!!!");     
             [self explodeBombOnSprite:hero];
         }
-        else if( bomb.position.y < 0 ){
+        else if( bomb.position.y < 80.0f ){
             //explode on the ocean surface
             CCLOG(@"bomb hit ocean floor");
             [self explodeBombOnSprite:nil];
@@ -252,7 +261,7 @@
         
     
     //elephant chasing
-    if ( isElephantChasing && !isElephantStomping ) {
+    if ( isElephantChasing && !isElephantStomping && !elephantStomped ) {
         CGFloat elephantX = elephant.position.x;
         CGFloat heroX = hero.position.x;
         
@@ -263,19 +272,19 @@
         if ( ( difference > -16.0f ) && ( difference < 16.0f ) ) {
             //stomp on human!!!
             isElephantStomping = YES;
-            CCLOG(@"Stomping on human!");
+//            CCLOG(@"Stomping on human!");
         }else  if ( difference <= -16.0f ) {
             //move right
             CGFloat newX = elephant.position.x + 100.0 * elephantSpeedMultiplierX * deltaTime;
 //            elephantSpeedMultiplierX++;                    
             elephant.position = ccp(newX, elephant.position.y);
-            CCLOG(@"elephant moving right to follow human");
+//            CCLOG(@"elephant moving right to follow human");
         }else if ( difference >= 16.0f ){
             //move left
             CGFloat newX = elephant.position.x - 100.0 * elephantSpeedMultiplierX * deltaTime;
 //            elephantSpeedMultiplierX++;                    
             elephant.position = ccp(newX, elephant.position.y);            
-            CCLOG(@"elephant moving left to follow human");
+//            CCLOG(@"elephant moving left to follow human");
         }        
     }
     
@@ -287,18 +296,36 @@
         
         
         //thump and also check to see if elephant hit human
-        if( elephant.position.y < 100 ){
+        if( elephant.position.y < 170 ){
             //thump on the ocean surface
             CCLOG(@"elephant THUMP!");
+            [[SimpleAudioEngine sharedEngine] playEffect:@"thud.caf"];              
+            [self moveElephantUpAgain];
             
 
             if ( CGRectContainsPoint(hero.boundingBox, elephant.position) ) {
-                CCLOG(@"elephant hit human!!");
+                CCLOG(@"ELEPHANT HIT HUMAN!!!");
                 
             }
             
         }
-        
+    }
+    
+    if ( elephantStomped ) {
+        if ( elephant.position.y < screenSize.height*0.55f ) {
+            //start moving back up
+            CGFloat newY = elephant.position.y + 100.0 * deltaTime;                  
+            elephant.position = ccp(elephant.position.x, newY);        
+//            CCLOG(@"elephant moving back up");            
+        }else{
+            //finally up, reset and start over
+            isElephantChasing = NO;
+            elephantStomped = NO;    
+            isElephantStunned = NO;
+            elephantSpeedMultiplierX = 1;        
+            elephantSpeedMultiplierY = 1;        
+//            CCLOG(@"elephant completed move up, stuff reset and ready to chase again!");
+        }
         
     }
     
