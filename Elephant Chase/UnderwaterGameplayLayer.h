@@ -23,10 +23,15 @@
     BOOL isElephantChasing;
     BOOL elephantStomped;    
     BOOL isElephantStomping;
-    BOOL isElephantStunned;
+
     int elephantSpeedMultiplierX;
     int elephantSpeedMultiplierY;
-
+    int elephantRageMultiplier;
+    float heroRageMultiplier;
+    
+    int heroLife;
+    int elephantLife;
+    
     
     CCSprite *hero;
     CCSprite *elephant;

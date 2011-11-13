@@ -146,6 +146,8 @@
 		EC521EF9146F6904001F0BFF /* swim.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EF0146F6904001F0BFF /* swim.caf */; };
 		EC521EFA146F6904001F0BFF /* thud.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EF1146F6904001F0BFF /* thud.caf */; };
 		EC521EFC146F6A76001F0BFF /* ocean-bg-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFB146F6A76001F0BFF /* ocean-bg-music.caf */; };
+		EC521EFF146FB66A001F0BFF /* hero-left.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFD146FB66A001F0BFF /* hero-left.png */; };
+		EC521F00146FB66A001F0BFF /* hero-right.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFE146FB66A001F0BFF /* hero-right.png */; };
 		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
@@ -421,6 +423,8 @@
 		EC521EF0146F6904001F0BFF /* swim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swim.caf; sourceTree = "<group>"; };
 		EC521EF1146F6904001F0BFF /* thud.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = thud.caf; sourceTree = "<group>"; };
 		EC521EFB146F6A76001F0BFF /* ocean-bg-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ocean-bg-music.caf"; sourceTree = "<group>"; };
+		EC521EFD146FB66A001F0BFF /* hero-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero-left.png"; sourceTree = "<group>"; };
+		EC521EFE146FB66A001F0BFF /* hero-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero-right.png"; sourceTree = "<group>"; };
 		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
 		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
@@ -919,6 +923,8 @@
 		EC58A4B1146E675000E7A841 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EC521EFD146FB66A001F0BFF /* hero-left.png */,
+				EC521EFE146FB66A001F0BFF /* hero-right.png */,
 				EC521E98146F0AC1001F0BFF /* elephant1.png */,
 				EC521EA0146F24F2001F0BFF /* cargo-ship.png */,
 				EC521E99146F0AC1001F0BFF /* elephant0.png */,
@@ -1056,6 +1062,8 @@
 				EC521EF9146F6904001F0BFF /* swim.caf in Resources */,
 				EC521EFA146F6904001F0BFF /* thud.caf in Resources */,
 				EC521EFC146F6A76001F0BFF /* ocean-bg-music.caf in Resources */,
+				EC521EFF146FB66A001F0BFF /* hero-left.png in Resources */,
+				EC521F00146FB66A001F0BFF /* hero-right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

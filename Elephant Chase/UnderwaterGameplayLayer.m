@@ -23,6 +23,7 @@
 -(void)explodeBombOnSprite:(CCSprite *)sprite;
 -(void)updateElephantChasing;
 -(void)moveElephantUpAgain;
+-(void)updateHeroLife;
 @end
 
 @implementation UnderwaterGameplayLayer
@@ -34,8 +35,8 @@
      
         self.isTouchEnabled = YES;
         
-        hero = [CCSprite spriteWithFile:@"hero.png"];
-        [hero setPosition:ccp(screenSize.width/2, screenSize.height*0.17f)];
+        hero = [CCSprite spriteWithFile:@"hero-left.png"];
+        [hero setPosition:ccp(screenSize.width/2, screenSize.height*0.2f)];
         [self addChild:hero];
         
         //init boat but do not add yet, the updateBoat function will add it
@@ -63,9 +64,13 @@
         
         isElephantChasing = NO;
         elephantStomped = NO;    
-        isElephantStunned = NO;
         elephantSpeedMultiplierX = 1;        
-        elephantSpeedMultiplierY = 1;        
+        elephantSpeedMultiplierY = 1;       
+        elephantRageMultiplier = 1;
+        heroRageMultiplier = 1;
+        
+        heroLife = 3;
+        elephantLife = 5;
         
         
         //SOUNDZZzZz
@@ -171,6 +176,9 @@
         [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-hurt.caf"];        
         CCLOG(@"elephant gets hurt animation");
         [elephant runAction:[CCBlink actionWithDuration:2.0 blinks:10]];        
+        elephantLife--;
+        elephantRageMultiplier+=2;
+        heroRageMultiplier+= 0.5;
         //TODO: LOTS OF STUFF TODO HERE:
         //
         //-show bomb explosion!
@@ -185,7 +193,8 @@
         
     }else if ( sprite == hero ){
         [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];        
-        [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];        
+        [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];    
+        heroLife--;
         CCLOG(@"hero gets hurt animation");        
     }
     
@@ -206,17 +215,26 @@
 {    
     //move hero left or right
     if (leftButton.active == YES) {
+        if ( hero.rotation != 0.0f ) {
+            hero.rotation = 0.0f;
+            hero.flipY = NO;
+        }
         if ( hero.position.x < (0+64) ) {
             //do nothing because he'll go off screen
         }else{
-            hero.position = ccp( hero.position.x - 150*deltaTime, hero.position.y);
+            hero.position = ccp( hero.position.x - 150 * heroRageMultiplier * deltaTime, hero.position.y);
         }
     }
     if (rightButton.active == YES) {
+        if ( hero.rotation != 180.0f ) {
+            hero.rotation = 180.0f;
+            hero.flipY = YES;
+        }
+        
         if ( hero.position.x > (screenSize.width - 32) ) {
             //do nothing because he'll go off screen
         }else{
-            hero.position = ccp( hero.position.x + 150*deltaTime, hero.position.y);
+            hero.position = ccp( hero.position.x + 150 * heroRageMultiplier * deltaTime, hero.position.y);
         }
     }
     
@@ -271,19 +289,19 @@
         
         
         
-        if ( ( difference > -16.0f ) && ( difference < 16.0f ) ) {
+        if ( ( difference > -32.0f ) && ( difference < 32.0f ) ) {
             //stomp on human!!!
             isElephantStomping = YES;
 //            CCLOG(@"Stomping on human!");
-        }else  if ( difference <= -16.0f ) {
+        }else  if ( difference <= -32.0f ) {
             //move right
-            CGFloat newX = elephant.position.x + 100.0 * elephantSpeedMultiplierX * deltaTime;
+            CGFloat newX = elephant.position.x + 100.0 * elephantSpeedMultiplierX * elephantRageMultiplier * deltaTime;
 //            elephantSpeedMultiplierX++;                    
             elephant.position = ccp(newX, elephant.position.y);
 //            CCLOG(@"elephant moving right to follow human");
-        }else if ( difference >= 16.0f ){
+        }else if ( difference >= 32.0f ){
             //move left
-            CGFloat newX = elephant.position.x - 100.0 * elephantSpeedMultiplierX * deltaTime;
+            CGFloat newX = elephant.position.x - 100.0 * elephantSpeedMultiplierX * elephantRageMultiplier * deltaTime;
 //            elephantSpeedMultiplierX++;                    
             elephant.position = ccp(newX, elephant.position.y);            
 //            CCLOG(@"elephant moving left to follow human");
@@ -291,7 +309,7 @@
     }
     
     if ( isElephantStomping ) {
-        CGFloat newY = elephant.position.y - 20.0 * elephantSpeedMultiplierY * deltaTime;
+        CGFloat newY = elephant.position.y - 20.0 * elephantSpeedMultiplierY * elephantRageMultiplier * deltaTime;
         elephantSpeedMultiplierY++;        
         
         elephant.position = ccp(elephant.position.x, newY);
@@ -309,6 +327,8 @@
                 CCLOG(@"ELEPHANT HIT HUMAN!!!");
                 [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];
                 [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];
+                heroLife--;
+                
             }
             
         }
@@ -317,14 +337,13 @@
     if ( elephantStomped ) {
         if ( elephant.position.y < screenSize.height*0.55f ) {
             //start moving back up
-            CGFloat newY = elephant.position.y + 100.0 * deltaTime;                  
+            CGFloat newY = elephant.position.y + 100.0 * (elephantRageMultiplier/2) * deltaTime;                  
             elephant.position = ccp(elephant.position.x, newY);        
 //            CCLOG(@"elephant moving back up");            
         }else{
             //finally up, reset and start over
             isElephantChasing = NO;
             elephantStomped = NO;    
-            isElephantStunned = NO;
             elephantSpeedMultiplierX = 1;        
             elephantSpeedMultiplierY = 1;        
 //            CCLOG(@"elephant completed move up, stuff reset and ready to chase again!");
