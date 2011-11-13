@@ -148,7 +148,8 @@
 		EC521EFC146F6A76001F0BFF /* ocean-bg-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFB146F6A76001F0BFF /* ocean-bg-music.caf */; };
 		EC521EFF146FB66A001F0BFF /* hero-left.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFD146FB66A001F0BFF /* hero-left.png */; };
 		EC521F00146FB66A001F0BFF /* hero-right.png in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFE146FB66A001F0BFF /* hero-right.png */; };
-		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
+		EC521F07146FC72B001F0BFF /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EC521F06146FC72B001F0BFF /* MainMenuScene.m */; };
+		EC521F0A146FC73E001F0BFF /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC521F09146FC73E001F0BFF /* MainMenuLayer.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
 		EC58A4C1146E6D6000E7A841 /* hero.png in Resources */ = {isa = PBXBuildFile; fileRef = EC58A4C0146E6D6000E7A841 /* hero.png */; };
@@ -425,8 +426,10 @@
 		EC521EFB146F6A76001F0BFF /* ocean-bg-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ocean-bg-music.caf"; sourceTree = "<group>"; };
 		EC521EFD146FB66A001F0BFF /* hero-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero-left.png"; sourceTree = "<group>"; };
 		EC521EFE146FB66A001F0BFF /* hero-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero-right.png"; sourceTree = "<group>"; };
-		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
-		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
+		EC521F05146FC72B001F0BFF /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
+		EC521F06146FC72B001F0BFF /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
+		EC521F08146FC73E001F0BFF /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
+		EC521F09146FC73E001F0BFF /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
 		EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderwaterBackgroundLayer.m; sourceTree = "<group>"; };
 		EC58A4BD146E6ADE00E7A841 /* UnderwaterGameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterGameplayLayer.h; sourceTree = "<group>"; };
@@ -504,12 +507,12 @@
 		EC1929E3146E1A4D001D072A /* Elephant Chase */ = {
 			isa = PBXGroup;
 			children = (
-				EC521EDD146F55F4001F0BFF /* particle-stuff */,
 				EC58A4E4146E7C9800E7A841 /* third party libraries */,
-				EC58A4A7146E62B700E7A841 /* config */,
-				EC58A4AB146E64AC00E7A841 /* helpers */,
+				EC521F04146FC66E001F0BFF /* Help Scene */,
+				EC521F03146FC666001F0BFF /* You Win Scene */,
+				EC521F02146FC658001F0BFF /* You Lose Scene */,
+				EC521F01146FC655001F0BFF /* Main Menu */,
 				EC58A4A5146E5F2100E7A841 /* Underwater Level */,
-				EC58A4AF146E668900E7A841 /* models */,
 				EC192B35146E1A50001D072A /* AppDelegate.h */,
 				EC192B36146E1A50001D072A /* AppDelegate.m */,
 				EC192B38146E1A50001D072A /* RootViewController.h */,
@@ -527,6 +530,7 @@
 		EC1929E4146E1A4D001D072A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EC521EDD146F55F4001F0BFF /* particle-stuff */,
 				EC1929E5146E1A4D001D072A /* Default.png */,
 				EC1929E7146E1A4D001D072A /* fps_images.png */,
 				EC1929E9146E1A4D001D072A /* Icon-72.png */,
@@ -882,6 +886,38 @@
 			path = "underwater-level-sounds";
 			sourceTree = "<group>";
 		};
+		EC521F01146FC655001F0BFF /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				EC521F05146FC72B001F0BFF /* MainMenuScene.h */,
+				EC521F06146FC72B001F0BFF /* MainMenuScene.m */,
+				EC521F08146FC73E001F0BFF /* MainMenuLayer.h */,
+				EC521F09146FC73E001F0BFF /* MainMenuLayer.m */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		EC521F02146FC658001F0BFF /* You Lose Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "You Lose Scene";
+			sourceTree = "<group>";
+		};
+		EC521F03146FC666001F0BFF /* You Win Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "You Win Scene";
+			sourceTree = "<group>";
+		};
+		EC521F04146FC66E001F0BFF /* Help Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Help Scene";
+			sourceTree = "<group>";
+		};
 		EC58A4A5146E5F2100E7A841 /* Underwater Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -895,29 +931,6 @@
 				EC58A4C3146E6E7B00E7A841 /* UnderwaterGameScene.m */,
 			);
 			name = "Underwater Level";
-			sourceTree = "<group>";
-		};
-		EC58A4A7146E62B700E7A841 /* config */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = config;
-			sourceTree = "<group>";
-		};
-		EC58A4AB146E64AC00E7A841 /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				EC58A4AC146E64C000E7A841 /* GameHelpers.h */,
-				EC58A4AD146E64C000E7A841 /* GameHelpers.m */,
-			);
-			name = helpers;
-			sourceTree = "<group>";
-		};
-		EC58A4AF146E668900E7A841 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = models;
 			sourceTree = "<group>";
 		};
 		EC58A4B1146E675000E7A841 /* images */ = {
@@ -1172,7 +1185,6 @@
 				EC192B37146E1A50001D072A /* AppDelegate.m in Sources */,
 				EC192B3A146E1A50001D072A /* RootViewController.m in Sources */,
 				EC192B3D146E1A50001D072A /* HelloWorldLayer.m in Sources */,
-				EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */,
 				EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */,
 				EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */,
 				EC58A4C4146E6E7B00E7A841 /* UnderwaterGameScene.m in Sources */,
@@ -1182,6 +1194,8 @@
 				EC58A4E1146E733900E7A841 /* SneakyButtonSkinnedBase.m in Sources */,
 				EC58A4E2146E733900E7A841 /* SneakyJoystick.m in Sources */,
 				EC58A4E3146E733900E7A841 /* SneakyJoystickSkinnedBase.m in Sources */,
+				EC521F07146FC72B001F0BFF /* MainMenuScene.m in Sources */,
+				EC521F0A146FC73E001F0BFF /* MainMenuLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
