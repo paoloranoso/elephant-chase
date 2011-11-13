@@ -91,6 +91,8 @@
 
 -(void) helpButtonTouched:(id)sender{
     [[SimpleAudioEngine sharedEngine] playEffect:@"menu-item-selected.caf"];    
+	LoadingScene* scene = [LoadingScene sceneWithTargetScene:TargetSceneHelp];    
+    [[CCDirector sharedDirector] replaceScene:scene];    
 }
 
 

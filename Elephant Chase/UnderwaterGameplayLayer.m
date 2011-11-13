@@ -408,9 +408,11 @@
         
         //TODO: show win or lose scenes accordingly
         if ( gameWon ) {
-            
+            LoadingScene* scene = [LoadingScene sceneWithTargetScene:TargetSceneYouWin];    
+            [[CCDirector sharedDirector] replaceScene:scene];            
         }else if ( gameLost ){
-            
+            LoadingScene* scene = [LoadingScene sceneWithTargetScene:TargetSceneYouLose];    
+            [[CCDirector sharedDirector] replaceScene:scene];            
         }
     }
     

@@ -59,7 +59,7 @@
 	
 	// create the menu using the items
 	CCMenu* menu = [CCMenu menuWithItems:item1, nil];
-	menu.position = CGPointMake(-(size.width / 2), size.height / 2);
+	menu.position = CGPointMake(-(size.width / 2), (size.height / 3)*2  ) ;
 	menu.tag = 100;
 	[self addChild:menu];
 	
