@@ -145,6 +145,7 @@
 		EC521EF8146F6904001F0BFF /* ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EEF146F6904001F0BFF /* ow.caf */; };
 		EC521EF9146F6904001F0BFF /* swim.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EF0146F6904001F0BFF /* swim.caf */; };
 		EC521EFA146F6904001F0BFF /* thud.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EF1146F6904001F0BFF /* thud.caf */; };
+		EC521EFC146F6A76001F0BFF /* ocean-bg-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = EC521EFB146F6A76001F0BFF /* ocean-bg-music.caf */; };
 		EC58A4AE146E64C000E7A841 /* GameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4AD146E64C000E7A841 /* GameHelpers.m */; };
 		EC58A4B8146E67BC00E7A841 /* UnderwaterBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4B7146E67BC00E7A841 /* UnderwaterBackgroundLayer.m */; };
 		EC58A4BF146E6ADF00E7A841 /* UnderwaterGameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58A4BE146E6ADE00E7A841 /* UnderwaterGameplayLayer.m */; };
@@ -419,6 +420,7 @@
 		EC521EEF146F6904001F0BFF /* ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow.caf; sourceTree = "<group>"; };
 		EC521EF0146F6904001F0BFF /* swim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swim.caf; sourceTree = "<group>"; };
 		EC521EF1146F6904001F0BFF /* thud.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = thud.caf; sourceTree = "<group>"; };
+		EC521EFB146F6A76001F0BFF /* ocean-bg-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ocean-bg-music.caf"; sourceTree = "<group>"; };
 		EC58A4AC146E64C000E7A841 /* GameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelpers.h; sourceTree = "<group>"; };
 		EC58A4AD146E64C000E7A841 /* GameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHelpers.m; sourceTree = "<group>"; };
 		EC58A4B6146E67BC00E7A841 /* UnderwaterBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderwaterBackgroundLayer.h; sourceTree = "<group>"; };
@@ -861,6 +863,7 @@
 		EC521EE8146F6904001F0BFF /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				EC521EFB146F6A76001F0BFF /* ocean-bg-music.caf */,
 				EC521EE9146F6904001F0BFF /* boat.caf */,
 				EC521EEA146F6904001F0BFF /* elephant-attack.caf */,
 				EC521EEB146F6904001F0BFF /* elephant-dies.caf */,
@@ -1052,6 +1055,7 @@
 				EC521EF8146F6904001F0BFF /* ow.caf in Resources */,
 				EC521EF9146F6904001F0BFF /* swim.caf in Resources */,
 				EC521EFA146F6904001F0BFF /* thud.caf in Resources */,
+				EC521EFC146F6A76001F0BFF /* ocean-bg-music.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
