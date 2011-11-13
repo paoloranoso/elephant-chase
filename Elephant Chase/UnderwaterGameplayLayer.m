@@ -24,6 +24,7 @@
 -(void)updateElephantChasing;
 -(void)moveElephantUpAgain;
 -(void)updateHeroLife;
+-(void)characterDied:(CCSprite *)sprite;
 @end
 
 @implementation UnderwaterGameplayLayer
@@ -173,28 +174,29 @@
     
     //TODO: ELEPHANT/HUMAN HURTING AND GAME OVER/WIN
     if ( sprite == elephant ) {
-        [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-hurt.caf"];        
-        CCLOG(@"elephant gets hurt animation");
-        [elephant runAction:[CCBlink actionWithDuration:2.0 blinks:10]];        
         elephantLife--;
-        elephantRageMultiplier+=2;
-        heroRageMultiplier+= 0.5;
-        //TODO: LOTS OF STUFF TODO HERE:
-        //
-        //-show bomb explosion!
-        //-decrease elephant health
-        //-if elephant health 0, you win!  do the following:
-        //      -play super explosion animation...maybe just lots of particle crap if no time?
-        //      -do all cleanup and replace scene with victory scene!
-        //-else
-        //  -elephant is stunned and is flashing...cannot move for 3 secs
-        //
-        //        
         
+        if ( elephantLife <= 0 ) {
+            //WIN!
+            [self characterDied:elephant];
+        }else{
+            [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-hurt.caf"];
+            [elephant runAction:[CCBlink actionWithDuration:2.0 blinks:10]];        
+            elephantRageMultiplier+=2;
+            heroRageMultiplier+= 0.5;            
+        }        
     }else if ( sprite == hero ){
-        [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];        
-        [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];    
         heroLife--;
+        [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];        
+        
+        if ( heroLife <= 0 ) {
+            //LOSE!
+            [self characterDied:hero];
+        }else{
+            [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];    
+        }          
+        
+
         CCLOG(@"hero gets hurt animation");        
     }
     
@@ -203,7 +205,43 @@
 -(void)moveElephantUpAgain{
     elephantStomped = YES;
     isElephantStomping = NO;
+}
+
+
+-(void)characterDied:(CCSprite *)sprite{
+    CCLOG(@"===character died called===");
+    [self unscheduleAllSelectors];
+    [self unscheduleUpdate];
     
+    if ( sprite == elephant ) {
+        [[SimpleAudioEngine sharedEngine] playEffect:@"elephant-dies.caf"];
+        
+        particleExplosion = [[[CCParticleExplosion alloc] init] autorelease];
+        
+        particleExplosion.position = elephant.position;
+        //            particleExplosion.endSize = 1;    
+        [self addChild:particleExplosion z:3.0];
+        particleExplosion.autoRemoveOnFinish = YES;
+        
+        [self removeChild:elephant cleanup:YES];
+        
+        //TODO: win screen
+    }
+    
+    if ( sprite == hero ) {
+        [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];
+        
+        particleExplosion = [[[CCParticleExplosion alloc] init] autorelease];
+        
+        particleExplosion.position = hero.position;
+        //            particleExplosion.endSize = 1;    
+        [self addChild:particleExplosion z:3.0];
+        particleExplosion.autoRemoveOnFinish = YES;
+        
+        [self removeChild:hero cleanup:YES];
+        
+        //TODO: lose screen
+    }
     
     
 }
@@ -325,9 +363,16 @@
 
             if ( CGRectContainsPoint(hero.boundingBox, elephant.position) ) {
                 CCLOG(@"ELEPHANT HIT HUMAN!!!");
-                [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];
-                [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];
                 heroLife--;
+                [[SimpleAudioEngine sharedEngine] playEffect:@"ow.caf"];        
+                
+                if ( heroLife <= 0 ) {
+                    //LOSE!
+                    [self characterDied:hero];
+                }else{
+                    [hero runAction:[CCBlink actionWithDuration:2.0 blinks:10]];    
+                }          
+                
                 
             }
             
@@ -337,7 +382,10 @@
     if ( elephantStomped ) {
         if ( elephant.position.y < screenSize.height*0.55f ) {
             //start moving back up
-            CGFloat newY = elephant.position.y + 100.0 * (elephantRageMultiplier/2) * deltaTime;                  
+            
+            int specialMultiplier = (elephantRageMultiplier/2) ? (elephantRageMultiplier/2) : 1;
+            
+            CGFloat newY = elephant.position.y + 100.0 * specialMultiplier * deltaTime;                  
             elephant.position = ccp(elephant.position.x, newY);        
 //            CCLOG(@"elephant moving back up");            
         }else{
@@ -363,7 +411,7 @@
         boatInMotion = YES;
         
         //Reset boatTimer by getting a random number between 5 and 15...this is the number of seconds we wait till the boat comes again
-        boatTimer =  (arc4random() % 11) + 5;        
+        boatTimer =  (arc4random() % 6) + 5;        
         CCLOG(@"boatTimer reset to %d seconds", boatTimer);
         
     [[SimpleAudioEngine sharedEngine] playEffect:@"boat.caf"];        
