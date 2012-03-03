@@ -72,8 +72,8 @@
         elephantRageMultiplier = 1;
         heroRageMultiplier = 1;
         
-        heroLife = 3;
-        elephantLife = 10;
+        heroLife = 10;
+        elephantLife = 20;
         
         gameOver = NO;
         gameWon = NO;
@@ -169,6 +169,33 @@
 
     particleExplosion.position = bomb.position;
     particleExplosion.endSize = 1;    
+    
+    
+    //COLORS TEST 1/31/2012
+    [particleExplosion setStartColor:ccc4FFromccc4B(ccc4(1.0, 0.5, 0.2, 1.0)) ];
+    [particleExplosion setEndColor:ccc4FFromccc4B(ccc4(1.0, 0.7, 0.5, 1.0)) ];
+    
+//    startColor.g = 0.25f;
+//    startColor.b = 0.12f;
+//    startColor.a = 1.0f;
+//    
+//    startColorVar.r = 0.0f;
+//    startColorVar.g = 0.0f;
+//    startColorVar.b = 0.0f;
+//    startColorVar.a = 0.0f;
+//    
+//    endColor.r = 0.0f;
+//    endColor.g = 0.0f;
+//    endColor.b = 0.0f;
+//    endColor.a = 1.0f;
+//    
+//    endColorVar.r = 0.0f;
+//    endColorVar.g = 0.0f;
+//    endColorVar.b = 1.0f;
+//    endColorVar.a = 0.0f;
+    
+    
+    
     [self addChild:particleExplosion z:3.0];
     particleExplosion.autoRemoveOnFinish = YES;
 
